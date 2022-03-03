@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title></title>
+    <style type="text/css">  
+
+     .sibling-element {
+        padding: 10px;
+        background-color: #f2f2f2;
+    }
+     .parent-element {
+        height: 200px;
+        padding:   10px;
+        background-color: #81adc8;
+
+    }
+    .main-element {
+         /* 
+        position: static; (by default) no special effect, it just go with the flow and it will not effect the bototm, top, left and right*/
+       /* position: relative; it will not remove the document flow
+        left: 100px; 
+        bottom: 0; and top */
+        position: absolute; /*the space and remove and it no longer follow the original flow. based on the parent element, it will look at the parent and check if they have position, if they dont have, it goes up to the next parent. 
+        if they have position, the element moves inside the parent element. THEY WILL BE AFFECTED BY SCROLLING
+        position:  fixed; it will always look at the hmtl and not following the parent element and NOT AFFECTED BY SCROLLING */
+        background-color: yellow;
+        padding: 10px;
+    }
+
+    </style>
+</head>
+<body>
+ <div class="parent-element">
+            <div class="sibling-element">
+                I'm the other sibling element.
+            </div>
+            
+            <div class="main-element">
+                All eyes on me. I am the main element.
+            </div>
+            
+            <div class="sibling-element">
+                I'm the other sibling element.
+            </div>
+</div>
+</body>
+</html>
