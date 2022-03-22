@@ -19,6 +19,13 @@ align-content
 		
 		div{display: flex; border: 1px solid; 
 			width: 500px;height:400px;
+			justify-content: space-between;
+			align-items: center; /*deals with vertical axis, if it only have one line(flex line)*/
+			flex-direction: row-reverse; /*the item will be reverse */
+			/*flex-wrap: wrap; the next item will be move into the next line 
+			align-content: center; only works if it have multiple lines, it will move to the center if ada flex wrap: wrap
+
+			align-self is for individual flex items */
 		}
 
 		p{width:200px;height: 100px; 
