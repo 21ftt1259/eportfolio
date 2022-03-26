@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Week7-e-p2</title>
+
+	<style type="text/css">
+
+		#container {
+			display: flex;
+			flex-wrap: wrap;
+			width: 600px;
+			margin: 0px auto;
+		}
+
+		.forLabel {
+			width: 400px;
+			padding: 10px 0px;
+			box-sizing: border-box;
+		}
+
+		.forInput {
+			display: flex;
+			flex-grow: 1;
+			padding: 5px 0px;
+			box-sizing: border-box;
+		}
+
+		.forInput2 {
+			flex-grow: 1;
+		}
+
+		.forInput3 {
+			flex: 100%;
+			text-align: center;
+			padding: 10px 0px;
+			box-sizing: border-box;
+		}
+
+	</style>
+</head>
+<body>
+
+	<form method="" action="">	
+
+		<div id="container">
+	
+		<div class="forLabel"><label>Fullname</label></div>
+		<div class="forInput"><input class="forInput2" type="text" name="fullname" maxlength="30"></div>	
+		
+	
+		<div class="forLabel"><label>Email</label></div>
+		<div class="forInput"><input class="forInput2" type="email" name="email"></div>
+	
+
+		<div class="forLabel"><label>Date you can start</label></div>		
+		<div class="forInput"><input class="forInput2" type="date" name="date"></div>
+	
+	
+		<div class="forLabel"><label>Morning shift preference</label></div>
+		<div class="forInput"><input class="forInput2" type="time" name="time"></div>
+	
+
+		<div class="forLabel"><label>Evening shift perference</label></div>
+		<div class="forInput"><input class="forInput2" type="time" name="time"></div>
+	
+
+		<div class="forLabel"><label>How many hours you can work? In multiple of 3</label></div>		
+		<div class="forInput"><input class="forInput2" type="number" name="hours" step="3" min="3" max="9"></div>
+
+	
+		<div class="forLabel"><label>Distance you willing to commute to volunteer center?</label></div>
+		<div class="forInput">1<input type="range" name="distance" min="1" max="15" value="3">15</div>		
+		
+
+		<div class="forLabel"><label>You currency perference for payment?</label></div>	
+	
+		<div class="forInput">
+			<input type="radio" name="currency">
+			<label for="pound"> &pound;</label>
+		
+			<input type="radio" name="currency">
+			<label for="yen">	&yen;</label>
+
+			<input type="radio" name="currency">
+			<label for="euro">	&euro;</label> 
+		</div>	
+		
+		
+		<div class="forInput3">
+			<textarea rows="6" cols="40" placeholder="Type your home address"></textarea>
+		</div>
+
+		<div class="forInput3">
+			<del>You will be given daily meals</del>
+		</div>
+
+		<div class="forInput3">
+			<input type="checkbox" name="checkbox" checked disabled>I agree to all terms and conditions
+		</div>
+
+		<div class="forInput3">
+			Prove you are not robot: 10 &lt; 20? 
+			<input type="checkbox" name="robot">
+		</div>	
+	
+		<div class="forInput3">
+			<input type="submit" value="Volunteer now!">
+		</div>
+
+		<div class="forInput3">
+			<input type="reset" value="Start Over">
+		</div>
+
+		<div class="forInput3">
+			For more informaton, visit MOH <a href="https://www.moh.gov.bn/Pages/Home.aspx" target="_blank">Website</a>
+		</div>
+
+	</form>
+</div>
+
+
+</body>
+</html>
