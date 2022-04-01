@@ -29,13 +29,20 @@
       margin-top: 20px;
       height: 150vh;
 		}
+
+    .container2 {
+      border: 1px solid;
+      margin: auto;
+      margin-top: 20px;
+      height: 60vh;
+    }
     .placeBox {
       border: 1px solid;
       text-align: justify;
       align-items: center;
       padding: 5px;
       margin: 5px 10px; 
-      height: 75%;
+      height: 89%;
     }
 
     .readMore {
@@ -62,7 +69,7 @@
 
       display: grid;
       grid-template-columns: 50% 50%;
-      grid-template-rows: auto auto auto;
+      grid-template-rows: auto auto;
       border: 1px solid;
 
     }
@@ -180,7 +187,7 @@
   </div>
   </div>
 </div>
-
+<br>
 <!-- FILTER  -->
   <h2>Filter</h2>   
 <div class="container mt-3">
@@ -207,6 +214,8 @@ $(document).ready(function(){
   });
 });
 </script>
+<br>
+<!-- MODAL -->
 <h2>Interesting Places</h2>
 <div class="container grid1">
  
@@ -233,11 +242,9 @@ $(document).ready(function(){
       For more information, visit their IG @jerudongpark or visit their website at <a href="https://www.jerudongpark.com/" target="_blank">www.jerudongpark.com</a>
     </div>
   </div>
-
       </div>
     </div>
   </div>
-
 </div>
 
 <!-- Button to Open the Modal -->
@@ -268,10 +275,65 @@ $(document).ready(function(){
   </div>
 
 </div>
+
+<!-- Button to Open the Modal -->
+<div class="placeBox">
+  <div>
+    <img src="img7.jpg" class="imgInterestingPlaces rounded"><br><h4>Yayasan Sultan Haji Hassanal Bolkiah</h4>
+    <b>First opened in 1996, Yayasan Shopping Complex is one of Brunei’s earliest and longest-standing shopping malls. Considered a tourist attraction for a majority of its existence due to its scenic...<b class="readMore" data-toggle="modal" data-target="#Yayasan">Read more</b>
+    </b>
+  </div>
+
+  <!-- The Modal -->
+  <div class="modal fade" id="Yayasan">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+
+  <!-- Modal body -->
+  <div class="modal-body modalGrid">
+    <div><img class="imgModalGrid rounded" src="img7.jpg"></div>
+    <div class="modalContentPad"><button type="button" class="close" data-dismiss="modal">&times;</button><br><h4>Yayasan Sultan Haji Hassanal Bolkiah</h4>
+      First opened in 1996, Yayasan Shopping Complex is one of Brunei’s earliest and longest-standing shopping malls. Considered a tourist attraction for a majority of its existence due to its scenic fountain avenue and its close proximity to other popular sites such as Kampung Air and the Sultan Omar Ali Saifuddien Mosque. Recently, the shopping centre has gone through a few changes but has since reopened its doors with a new line-up of brands, mostly featuring locally made products.
+
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
+
 </div>
- 
+
+<!-- Button to Open the Modal -->
+<div class="placeBox">
+  <div>
+    <img src="img8.jpg" class="imgInterestingPlaces rounded"> <br><h4>Time Piece Monument</h4>
+    <b>The Time Piece Monument stands in the middle of Bandar Seri Begawan as an important historic landmark. The clock was made as a commemoration for Tuanku Abdul Rahman's visit to Brunei in 1959....<b class="readMore" data-toggle="modal" data-target="#TPM">Read more</b>
+    </b>
+  </div>
+
+  <!-- The Modal -->
+  <div class="modal fade" id="TPM">
+    <div class="modal-dialog modal-xl">
+      <div class="modal-content">
+
+  <!-- Modal body -->
+  <div class="modal-body modalGrid">
+    <div><img class="imgModalGrid rounded" src="img7.jpg"></div>
+    <div class="modalContentPad"><button type="button" class="close" data-dismiss="modal">&times;</button><br><h4>Time Piece Monument</h4>
+      The Time Piece Monument stands in the middle of Bandar Seri Begawan as an important historic landmark. The clock was made as a commemoration for Tuanku Abdul Rahman's visit to Brunei in 1959. He also laid the foundation stone of the clock during that visit. Many refer to the Clock Tower as "Ground Zero", as many use it as reference to measure the distance between the capital and other important places in Brunei.
+
+    </div>
+  </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+</div>
+ <br>
 <h2>Latest Feedback</h2>
-<div class="container">
+<div class="container2">
   
 <div id="bs4-multi-slide-carousel" class="carousel slide" data-ride="carousel" >
   <div class="carousel-inner">
@@ -308,8 +370,9 @@ $('#bs4-multi-slide-carousel').carousel({
 })
 </script>
 </div>
+<br>
 <h2>Category Filter</h2>
-<div class="container">
+<div class="container2">
   
   <div class="inline">
   <div class="btn-group">
