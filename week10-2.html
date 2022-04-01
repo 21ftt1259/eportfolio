@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<script type="text/javascript">
+		// var x = 10;
+		// var y = 15;
+		// var z = "10";
+		// var t="";
+		// console.log("t is " +t);
+
+		// console.log("x is " + x);
+		// const DISCOUNT= 0.1;
+		// console.log("DISCOUNT is " + DISCOUNT);
+		// DISCOUNT = 0.5;
+		// console.log("DISCOUNT is " + DISCOUNT);
+
+		// var answer = (x>y);
+		// alert(answer);
+
+		// alert(x==z);
+
+		// triple ===, comparing the value and the type. true true = false, true false = false. 
+
+		// constant is a value that cannot be change or declare again 
+
+		// t is undeFined
+
+		// if (x>y) {
+		// 	console.log("X is basar than Y");
+		// } 
+
+		// if(x<y) {
+		// 	console.log("X is damit than Y");
+		// }
+
+
+		// if (x>y) {
+		// 	console.log("X is basar than Y");
+		// }
+		// else {
+		// 	console.log("X is damit than Y");
+		// }
+
+		var name=prompt("Enter your name: ");
+		var gender=prompt("Enter your gender [M/F]: ");
+		var yearOfBirth=prompt("Enter the year of birth: ");
+		var date = new Date;
+		var age= (date.getFullYear()) - yearOfBirth;
+		var gender2="";
+
+		// Solution #1
+		// This one is repetitive. Altho ok but not preferred 
+		// if (gender=="M") {gender2="Awang";}
+		// if (gender=="m") {gender2="Awang";}
+		// if (gender=="F") {gender2="Dayang";}
+		// if (gender=="f") {gender2="Dayang";}
+
+		// Solution #2
+		// improve version of solution #1, instead of balik2, use logical operator OR
+		// if (gender=="M" || gender=="m") {gender2="Awang";}
+		// else {gender2="Dayang";}
+		//
+		//
+		// the problem is, if key in any char other than the one stated above, it will always be Dayang
+
+		// Solution #3
+		// this is better
+		// if (gender=="M" || gender=="m") {gender2="Awang";}
+		// if (gender=="F" || gender=="f") {gender2="Dayang";}
+
+		// but what if people enter 1 2 3 or any letter?
+		// we cannot have all combinations in the if conditions - will take forever
+		// if(gender="A" || gender=="a" and so on)
+		// so we further improve, to solution #4
+
+		// Solution #4
+		if (gender=="M" || gender=="m") {
+			gender2 = "Awang ";
+		}
+
+		else if (gender=="F" || gender=="f"){
+			gender2 = "Dayang ";
+		}
+		else {
+			gender2 = "Awg/Dyg ";
+		}
+		document.write("Hi " + gender2 + name + ". This year you will be " + age + " years old");
+
+	</script>
+		
+
+</body>
+</html>
