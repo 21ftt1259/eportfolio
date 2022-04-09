@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	<link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+	<script src="/path/to/cdn/jquery.slim.min.js"></script>
+	<link rel="stylesheet" href="style.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+	<style type="text/css">
+	/*css for horizontal scroller*/
+	.data_preview_area {
+		margin:0.5rem 0;
+		overflow-x:auto;
+		white-space:nowrap;
+	}
+
+	.data_preview_frame {
+	  width:calc(100% / 5);
+	  display:inline-block;
+	}
+
+	::-webkit-scrollbar {
+  	  width: 10px;
+	}
+
+	::-webkit-scrollbar-track {
+	  background: #f1f1f1;
+	}
+
+	::-webkit-scrollbar-thumb {
+	  background: #888;
+	}
+
+	img{
+		width: 100%;
+		height: 90%;
+	}
+	</style>
+</head>
+<body>
+<h2>Partners and Spomser</h2>
+<div class="preview_control_area">
+  <div class="data_preview_area">
+
+    <div class="data_preview_frame"><div class="data_preview_content"><img src="sponsor.png" data-alt="first"></div></div>
+
+    <div class="data_preview_frame"><div class="data_preview_content"><img src="sponsor.jpg" data-alt="second"></div></div>
+
+    <div class="data_preview_frame"><div class="data_preview_content"><img src="sponsor2.jpg" data-alt="third"></div></div>
+
+    <div class="data_preview_frame"><div class="data_preview_content"><img src="sponsor3.jpg" data-alt="fourth"></div></div>
+
+    <div class="data_preview_frame"><div class="data_preview_content"><img src="sponsor4.jpg" data-alt="fifth"></div></div>
+
+    <div class="data_preview_frame"><div class="data_preview_content"><img src="sponsor.png" data-alt="sixth"></div></div>
+  </div>
+</div>
+
+
+<script type="text/javascript">
+	window.addEventListener("load" , function (){
+  	$(".previous_button").on("click",function(){ scroll(this,false); });
+  	$(".next_button").on("click",    function(){ scroll(this,true); });
+	});
+
+	function scroll(elem,next){
+	  let target  = $(elem).siblings(".data_preview_area");
+	  let width   = target.outerWidth()
+	  if (next){
+	    target.animate({ scrollLeft:"+=" + String(width) } , 300);
+	  }
+	  else{
+	    target.animate({ scrollLeft:"-=" + String(width) } , 300);
+	  }
+	}
+</script>
+</body>
+</html>
