@@ -7,24 +7,46 @@
 </head>
 <body>
 	<script type="text/javascript">
+
+		// 0-6hr, regardless of weather = too early to go out
+		// 7 - 16, + sunny = Lets play outside
+		// 7 - 16, + raining = Lets play indoor
+		// 17 - 21 onward + sunny = Lets go to cinema (summer days)
+		// 17 - 21 onward + raining = Watch movie at home
+		// 22 -24, regardless the weather = it is bed time!
+		// invalid time = shows invalid and good bye
 		
 
 		var time=prompt("Enter time in 24h: ");
 		var wx=prompt("Enter weather: ");
 
 		if ((time>=0 && time<=6)) {
-			console.log("Too early to go out")
+			console.log("Too early to go out");
 		} 
 
-		else if (time>=6 && time <=17  && wx=="sunny") {}
+		else if (time>=6 && time <=17  && wx=="sunny") {
+			console.log("Lets play outside");
+		}
 
-		else if (time>=6 && time <=17  && wx=="raining") {}
+		else if (time>=6 && time <=17  && wx=="raining") {
+			console.log("Lets play indoor");
+		}
 
-		else if (time>=16 && time <=22) {}
+		else if (time>=16 && time <=22 && wx =="sunny") {
+			console.log("Lets go to cinema");
+		}
+		
+		else if (time>=16 && time <=22 && wx =="raining") {
+			console.log("Watch movie at home");
+		}
 
-		else if (time>=21 && time <=25) {}
+		else if (time>=21 && time <=25) {
+			console.log("It is bed time!");
+		}
 
-		else {}
+		else {
+			console.log("Invalid and good bye");
+		}
 
 
 

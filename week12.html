@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+	
+
+</head>
+<body>
+
+	<!-- <script type="text/javascript">
+		var maths=prompt("Do you have credit Mathematics?  ");
+		var eng=prompt("Do you have credit English?  ");
+		var bm=prompt("Do you have credit Malay?  ");
+		var ic=prompt("Are you yellow IC holder?  ");
+		var subj=prompt("Do you have credits in 3 English medium subject? ");
+
+		if (ic=="n" && subj=="y" && maths=="y" && eng=="y") {
+			document.write("You are eligible to apply as fee paying student");
+		}
+
+		else if (maths=="y" && eng=="y" && subj=="y") {
+			document.write("Congratulations! You are eligible to apply and receive full scholarship");
+		} else {
+			document.write("Sorry, you are not eligible to apply");
+		}
+
+		 
+
+	</script> -->
+
+
+	<script type="text/javascript">
+
+		var choice = prompt("CHOICE: 1 for numberSpeller. 2 for VowelC. 3 for ageFinder ");
+
+		if (choice == 1) {
+			numberSpeller();
+		} else if (choice == 2) {
+			vowelC ();
+		} else {
+			ageFinder();
+		}
+
+	// 	numberSpeller ();
+
+		function numberSpeller(){
+
+		var num=prompt("Enter a number between 1 - 5 and I will spell them in words:  ");	
+		switch (num) {
+			// they use triple equal 1 === "1"
+			case "1": document.write("You have entered ONE"); break; 
+			case "2": document.write("You have entered TWO"); break;
+			case "3": document.write("You have entered THREE"); break;
+			case "4": document.write("You have entered FOUR"); break;
+			case "5": document.write("You have entered FIVE"); break;
+			default: document.write("I am yet to learn that!");
+		}
+	} // END OF FUNCTION
+
+
+	function vowelC() {
+
+		var alpha=prompt("Enter a character between a - z lowercase, I will tell you if it is vowel or consonant:");
+			
+
+			switch (alpha) {
+			case "a": 
+			case "e": 
+			case "i": 
+			case "o": 
+			case "u": document.write("It is a vowel"); break;
+			default: document.write("It is a consonant");
+		}
+	} // END OF FUNCTION
+
+
+	function ageFinder () {
+
+	var year = prompt("Enter year of birth");
+	var date = new Date;
+ 	var age= (date.getFullYear()) - year;
+
+ 	age<18?alert("underage"):age>=60?alert("Warga emas"):alert("Enjoy Life")
+
+
+	} // END OF FUNCTION 
+
+
+		// var num=prompt("Enter a number between 1 - 5 and I will spell them in words:  ");
+
+		// if (num > 5) {
+		// 	document.write("I am yet to learn that!");
+		// }
+
+		// else if (num == 1) {
+		// 	document.write("You have entered ONE");
+		// }
+
+		// else if (num == 2) {
+		// 	document.write("You have entered TWO");
+		// }
+
+		// else if (num == 3) {
+		// 	document.write("You have entered THREE");
+		// }
+
+		// else if (num == 4) {
+		// 	document.write("You have entered FOUR");
+		// }
+
+		// else if (num == 5) {
+		// 	document.write("You have entered FIVE");
+		// } 
+		
+		// var alpha=prompt("Enter a character between a - z lowercase, I will tell you if it is vowel or consonant:");
+			
+
+		// 	switch (alpha) {
+		// 	case "a": 
+		// 	case "e": 
+		// 	case "i": 
+		// 	case "o": 
+		// 	case "u": document.write("It is a vowel"); break;
+		// 	default: document.write("It is a consonant");
+		// }
+
+		// var weather=="sunny";
+
+		// if (weather=="sunny") {alert("outdoor")}
+		// 	else {alert("indoor")}
+
+		// var weather=true;
+
+		// weather?alert("outdoor"):alert("indoor");
+
+
+
+		// var num=prompt("Enter a number between 1 - 5 and I will spell them in words:  ");
+
+		// if (num > 5) {
+		// 	document.write("I am yet to learn that!");
+		// }
+
+		// else if (num == 1) {
+		// 	document.write("You have entered ONE");
+		// }
+
+		// else if (num == 2) {
+		// 	document.write("You have entered TWO");
+		// }
+
+		// else if (num == 3) {
+		// 	document.write("You have entered THREE");
+		// }
+
+		// else if (num == 4) {
+		// 	document.write("You have entered FOUR");
+		// }
+
+		// else if (num == 5) {
+		// 	document.write("You have entered FIVE");
+		// } 
+
+		// switch (num) {
+		// 	// they use triple equal 1 === "1"
+		// 	case "1": document.write("You have entered ONE"); break; 
+		// 	case "2": document.write("You have entered TWO"); break;
+		// 	case "3": document.write("You have entered THREE"); break;
+		// 	case "4": document.write("You have entered FOUR"); break;
+		// 	case "5": document.write("You have entered FIVE"); break;
+		// 	default: document.write("I am yet to learn that!");
+		// } -->
+
+	 </script>
+
+
+<!--  // enter year of birth
+ // below 18 - underage
+ // above 18  - adult
+ // print age -->
+
+ 
+<!-- <script type="text/javascript">
+
+	// var age = new Date().getFullYear();
+
+	var year = prompt("Enter year of birth");
+	var date = new Date;
+ 	var age= (date.getFullYear()) - year;
+ 	
+
+ 	// if (age <=17) {
+ 	// 	document.write("You are underage. You're " + age + " years old.");
+ 	// }
+ 	// else {
+ 	// 	document.write("You are an adult. You're "  + age + " years old.");
+ 	// }
+
+ 	// if (new Date().getFullYear()-year<18) {
+ 	// 	document.write("You are underage. You're " + age + " years old.");
+ 	// }
+ 	// else {
+ 	// 	document.write("You are an adult. You're "  + age + " years old.");
+ 	// }
+
+ 	// ternary operator
+
+ 	// new Date().getFullYear()-year<18? alert("underage") : alert("adult");
+
+
+
+ 	// Sample 2
+
+ 	// if (age <=17) {
+ 	//  	document.write("You are underage. You're " + age + " years old.");
+ 	//  } 
+
+ 	//  else if (age >=60) {
+ 	//  	document.write("Warga emas");
+ 	//  } else {
+ 	//  	document.write("Enjoy life");
+ 	//  }
+
+ 	// age<18?alert("underage"):age>=60?alert("Warga emas"):alert("Enjoy Life")
+
+
+
+ </script> -->
+
+
+</body>
+</html>

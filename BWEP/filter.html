@@ -5,67 +5,114 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title></title>
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.3.1/minty/bootstrap.min.css">
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script> -->
+<!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script> -->
 <script src="filterbucks.js"></script>
 
-<style>
+
+<style type="text/css"> 
+
+	.container{
+		border: 1px solid;
+		display: grid;
+		grid-column: 1fr 1fr;
+
+	}
+	.container>div:nth-child(1) {
+		grid-column: 1 / 2;
+	}
+
+	.container2 {
+
+		display: grid;
+		grid-template-columns: 60% 50%;
+		border: 1px solid;
+		grid-gap: 2em;
+		grid-template-rows: repeat(6, 30%);
+
+	}
+
+	.container2>div:nth-child(1) {
+		grid-column: 1 / 2;
+	}
+
+	.container2>div:nth-child(2) {
+		grid-column: 2 / 3;
+	}
+
+	img {
+		width: 60%;
+		height: 50%;
+	}
+
+</style>
+
+ 
+<!-- <style>
   .container { margin: 150px auto; max-width: 960px; }
   h2,.alert{ margin: 1.25rem 0; }
 body { background-color: #f7f7f7;}
-  </style>
+  </style> -->
 
-  <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
+  <!-- <link href="https://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css"> -->
 </head>
 <body>
  <div class="container">
-    <h2>By weeks</h2>
-<select class="filter1 form-control" data-fbdeep="0">
-	<option data-fbflush="true" value="none">
-		Select
-	</option>
-	<option value="Ford">
-		Ford
-	</option>
-	<option value="Opel">
-		Opel
-	</option>
-</select>
-<h2>By Districts</h2>
+
+<div>
+ 
+
+<h4>By Districts</h4>
 <select class="filter1 form-control" data-fbdeep="1">
 	<option data-fbflush="true" value="none">
 		Select
 	</option>
-	<option value="Speed">
-		Speed
+	<option value="BruneiMuara">
+		Brunei Muara
 	</option>
-	<option value="Comfort">
-		Comfort
+	<option value="Tutong">
+		Tutong
 	</option>
-	<option value="Extreme">
-		Extreme
+	<option value="Temburong">
+		Temburong
+	</option>
+	<option value="Belait">
+		Belait
 	</option>
 </select>
 
-<div class="alert alert-primary">
-	<div class="filterbucks Ford Speed">
-    	<h3>Ford Speed</h3>
-    </div>
-    <div class="filterbucks Opel Speed">
-    	<h3>Opel Speed</h3>
-    </div>
-    <div class="filterbucks Opel Comfort">
-    	<h3>Opel Comfort</h3>
-    </div>
-    <div class="filterbucks Ford Comfort">
-    	<h3>Ford Comfort</h3>
-	</div>
-	<div class="filterbucks Ford Extreme">
-    	<h3>Ford Extreme</h3>
-    </div>
+<h4>Indoor/Outdoor</h4>
+<select class="filter1 form-control" data-fbdeep="2">
+	<option data-fbflush="true" value="none">
+		Select
+	</option>
+	<option value="Indoor">
+		Indoor
+	</option>
+	<option value="Outdoor">
+		Outdoor
+	</option>
+</select>
+</div>
+
+  <div class="container2">
+
+  	<div class="">
+
+  	 <div class="filterbucks Week1 BruneiMuara Indoor"><img src="dermaga.jpg"></div>
+  	 <div class="filterbucks Week2 BruneiMuara Indoor"><img src="jp.jpeg"></div>
+  	 <div class="filterbucks Week3 Tutong Outdoor"><img src="tasek.jpg"></div>
+  	 <div class="filterbucks Week4 Tutong Indoor"><img src="tutongtown.jpg"></div>
+  	 <div class="filterbucks Week5 Belait Indoor"><img src="luagan.jpg"></div>
+  	 <div class="filterbucks Week5 Belait Outdoor"><img src="nationalpark.jpg"></div>
+
+  	 </div>
+
   </div>
     <script>
+
     jQuery(document).ready(function(){
         $(".filter1").filterbucks({
 			HideUnrelateds:true,

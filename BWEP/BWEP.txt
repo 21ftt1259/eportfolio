@@ -1,0 +1,15 @@
+BS 4
+
+Carousel
+Modal
+Accordion
+Filter for interesting places
+Feedback
+
+Jquery
+
+Filter 
+Testimonial
+Zoom in/Zoom out
+Scroll
+Index list of event and previous (Liquo plugin)
