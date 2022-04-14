@@ -15,21 +15,21 @@
 	<style type="text/css">
 
 		h1, footer {
-			text-align: center;
-			border: 1px solid;
-			background-color: steelblue;
-			color: white;
-			padding: 5px;
-			margin: 5px;
+				text-align: center;
+				border: 1px solid;
+				background-color: steelblue;
+				color: white;
+				padding: 5px;
+				margin: 5px;
 		}
 
 		p {
-			text-align: center;
+				text-align: center;
 		}
 
 		.container {
 			
-			margin: auto;
+				margin: auto;
 		    margin-top: 20px;
 		    
 		}
@@ -37,14 +37,14 @@
 		.grid1 {
 
 	      display: grid;
-	      grid-template-columns: 50% 50%;
 	      grid-template-rows: auto auto;
 	      border: 1px solid;
 
     }
 
 	   .imgFilter {
-	    	width: 50%;
+	    	width: 55%;
+	    	
 	  }
 
 	   .txtFilter {
@@ -81,6 +81,8 @@
     		}
 
 
+
+
     	}
 
 	</style>
@@ -98,10 +100,11 @@
 <!-- FILTER  -->
   <h1>Interesting Places to visit in Brunei Darussalam</h1> 
 <div class="container mt-3">
-	<div id="accordion">
+	<div id="accordion" class="grid1">
  
-  <input class="grid1" id="myInput" type="text" placeholder="Search..">
+  <input id="myInput" type="text" placeholder="Search..">
   <br>
+  
   <ul class="list-group" id="myList">
 
     <li class="list-group-item">
