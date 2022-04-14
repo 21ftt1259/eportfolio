@@ -83,6 +83,40 @@
 			border: 1px solid white;
 		}
 
+		@media screen and (max-width: 479px) {
+
+
+
+			.grid1 {
+				display: grid;
+				grid-column-gap: 1em;
+				grid-template-columns: 1fr 1fr;
+			}
+
+			h1, footer {
+				font-size: 20px;
+				text-align: center;
+				border: 1px solid;
+				background-color: lightblue;
+				color: white;
+				padding: 5px;
+				margin: 5px;
+			}
+
+			.grid2 {
+				width: 100%;
+				display: grid;
+				grid-template-columns: 1fr;
+				grid-template-rows: 5vh;
+				grid-auto-rows: auto;
+				text-align: center;
+				background-color: lightsteelblue;
+			}
+
+
+
+		}
+
 	</style>
 
 	<a href="">Home</a>
@@ -282,6 +316,10 @@
 			</div>
 
 		</div>
+	</div>
+
+
+
 
 		<script>
 
@@ -304,8 +342,6 @@
 		  $('[data-toggle="popover"]').popover();   
 		});
 		</script>
-
-		
 
 	</div>
 
