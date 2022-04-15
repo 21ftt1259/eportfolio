@@ -43,6 +43,8 @@
 
 		}
 
+
+
 		.grid2 {
 			width: 100%;
 			display: grid;
@@ -107,9 +109,10 @@
     			width: 100%;
     			height: auto;
     			display: grid;
-    			grid-template-columns: 1fr;
-    			grid-template-rows: 20% 50%;
+    			grid-template-columns: 100%;
+    			grid-template-rows: auto auto;
     			grid-row-gap: 2em;
+
     		}
 
     		.grid2>div {
@@ -124,12 +127,13 @@
     		.grid3 {
     			height: auto;
     			display: grid;
-    			/*grid-template-columns: repeat(3, 1fr);*/
-    			grid-template-rows: 0.5fr 0.5fr 0.5fr;
-    			grid-template-rows: 10vh;
+    			grid-template-columns: repeat(3, 33.33%);
+    			grid-template-rows: auto auto auto;
+    			/*grid-template-rows: 10vh;*/
 				/*grid-auto-rows: auto;*/
     			grid-row-start: 1;
     			grid-row-end: 2;
+    			/*margin-bottom: 2em;*/
     		}
 
     		.grid3>div:nth-child(1) {
@@ -146,6 +150,13 @@
     			grid-row-start: 2;
     			grid-row-end: 3;
     		}
+
+    		/*.test {
+    			height: 100%;
+    			width: 90%;
+    			text-align: center;
+    			align-items: center;
+    		}*/
 		}
 
 	</style>
@@ -159,7 +170,7 @@
 </head>
 <body>
 
-<div class="grid1">
+	<div class="grid1">
 
 
 	<!-- HEADER FOR CONTENT -->
@@ -172,7 +183,7 @@
 			<!-- EVENT 1 -->
 
 			<div class="filterbucks Week2 BruneiMuara Outdoor" >
-				<a href="#"  data-toggle="popover" title="Event Description"  data-content="In conjunction with the World Arab Language Day held every Dec 18, UNISSA will be organising an Arab Language festival in collaboration with Saudi Arabia Embassy. Participants from neighbouring Asean countries will be involved in the festival.">Arab Language Festival (Outdoor)</a>
+				<a href="#"  data-toggle="popover" title="Event Description" data-content=" In conjunction with the World Arab Language Day held every Dec 18, UNISSA will be organising an Arab Language festival in collaboration with Saudi Arabia Embassy. Participants from neighbouring Asean countries will be involved in the festival.">Arab Language Festival (Outdoor)</a>
 			</div>
 			<div class="filterbucks Week2 BruneiMuara Outdoor">University Sultan Sharif Ali, Brunei Muara</div>
 			<div class="filterbucks Week2 BruneiMuara Outdoor"><b>Week 2</b>: 18 December 2022 1:30PM - 4:30PM </div>
@@ -285,11 +296,11 @@
 		</div>
 
 		<div class="grid3">
-			<div  class="fa">&#xf0b0;  Category Filter</div>
+			<div class="fa">&#xf0b0;  Category Filter</div>
 
 			<div>By Weeks</div>
 			<div>
-					<select class="filter1 form-control" data-fbdeep="0">
+					<select class="filter1 form-control test" data-fbdeep="0">
 					<option data-fbflush="true" value="none">
 						Select
 					</option>
@@ -350,8 +361,6 @@
 
 		</div>
 	</div>
-
-
 
 		<div class="footer"><footer>Copyright © 2022 Visit Brunei</footer></div>
 
