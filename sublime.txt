@@ -1,0 +1,83 @@
+<!-- CASCADING EFX
+	<style type="text/css">
+		
+		h1{font-family: Arial;} 
+		p{color: skyblue; font-size: 2em;} (skyblue, 2em)
+		u{background-color: darkmagenta;}
+		p{font-style: italic;} (skyblue, 2em, italic)
+		p{line-height: 2em; color: red;} (skyblue, 2em, italic, 2em)
+
+	</style>
+</head>
+<body>
+<h1>This is H1</h1>
+<p>I am a paragraph</p>
+<p>another paragraph</p>
+<u>Im underline</u>
+<p>yet another P</p> -->
+
+
+
+
+<style type="text/css">
+		/*.red{color: red}*/ /*if dua p dlm div*/
+		/*p{color: red} *//*if semua p*/
+
+		/*div p {color: red;} decendant selector, using space, semua p jadi red*/ 
+		 /* div>p {color: red;} child selector, using (>), only p dalam span jadi red*/
+
+		/* div>h2 {color: red;} 
+		 span>p{color: red;}*/
+
+		/* div>h2, span>p {color: red;} /*multiple selector,  using (,) */
+		.red {color: red;}
+
+
+	</style>
+</head>
+<body>
+<div>
+	<h2>I am H2</h2>
+	<h3>Im a h3</h3>	
+	<h3>yet another h3</h3>
+	<!-- <p class="red">Im a P in a div</p>
+	<p class="red">Im also P in a div</p> -->
+	<p>Im a P in a div</p>
+	<p>Im also P in a div</p>
+	<span>
+	<!-- 	<p class="red">I am a child of span</p> -->
+		<p>I am a child of span</p>
+
+	</span>
+</div>
+<p>im outside div</p>
+<h2>im h2 outside div</h2>
+
+
+<style type="text/css">
+	
+/*	.red{color: red}*/
+	/*div+p{color: red}*/ /*adjacent sibling using +, only p dalam div*/
+	div~p{color: red} /*general sibling using ~, after div and the next P element will become red*/
+	</style>
+</head>
+<body>
+		<div>
+		 	<p>Im the first child of 1st div</p>
+		 	<p>Im the second child of 1st div</p>
+		</div>
+<!-- 		<p class="red">I am the next sibling just after 1st div</p> -->
+		<p>I am the next sibling just after 1st div</p>
+		<p>I am the second sibling just after 1st div</p>
+		<div>
+		 	<p>I am the first child of the 2nd div</p>
+		</div>
+<!-- 		<p class="red">Iam the next sibling after the 2nd div</p> -->
+		<p>Iam the next sibling after the 2nd div</p>
+		<p>I am the second sibling just after 2nd div</p>
+		<p>I am the thirsd sibling just after 2nd div</p>
+
+
+
+div+p{color: red} adjacent sibling using +
+div~p{color: red}  general sibling using ~

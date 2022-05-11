@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title> Week 12-1 DOM</title>
 
 	<style type="text/css">
 		
@@ -13,22 +13,35 @@
 			border: 1px solid;
 		}
 	</style>
-
-
 </head>
 <body>
 
-	<input type="text" id="nama">
+	<input type="text" id="nama" onfocus="magnify()" onblur="restore()"> <!--  an element can be trigger by different events -->
 	<div id="msg"></div>
 	<button onclick="copyToDiv()">Copy to div</button>
 
 	<script type="text/javascript">
+
 		function copyToDiv() {
 
-			var nama = document.getElementById("nama") //value usually use for input element
-			var msg = document.getElementById("msg");
+			var nama = document.getElementById("nama");  //value usually use for input element
+			var msg = document.getElementById("msg");	// non input element use innerHTML
 
-			msg.innerHTML=nama.value;
+			// msg.innerHTML+=nama.value + " ";
+			msg.innerHTML= msg.innerHTML + nama.value + " ";
+			
+		}
+
+		function magnify() {
+			var nama = document.getElementById("nama");
+			nama.style.color="magenta";
+			nama.style.fontSize="1.5em";
+		}
+
+		function restore() {
+			var nama = document.getElementById("nama");
+			nama.style.color="black";
+			nama.style.fontSize="1em";
 		}
 
 	</script>

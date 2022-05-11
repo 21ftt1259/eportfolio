@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body>
+
+	<input type="text" id="name" placeholder="name"><br>
+	<input type="radio" name="gender" value="male" id="male">Male
+	<input type="radio" name="gender" value="female" id="female">Female<br>
+	<input type="checkbox" name="wishlist" value="money">money
+	<input type="checkbox" name="wishlist" value="travel">travel
+	<input type="checkbox" name="wishlist" value="hapiness">hapiness<br>
+
+	<select name="choice" id="wish">
+		<option value="eternal">eternal life</option>
+		<option value="young">forever young</option>
+		<option value="beauty">eternal beauty</option>
+	</select>
+d
+	<button onclick="retGender()">reveal gender</button>
+	<!-- <button onclick="retWL()">reveal wishlist</button> -->
+	<button onclick="retWL1()">reveal wishlist</button>
+	<button onclick="retSelet()">reveal select</button>
+
+	<script>
+
+		function retSelet() {
+			var wish = document.getElementById("wish");
+			// alert(wish.value); // to retrive the value
+
+			alert(wish.options[wish.selectedIndex].value) // the option will be select "eternal life", "forever young"  selectedIndex: retrieve its index and get the text
+		}
+		
+		function retGender() {
+			var male = document.getElementById("male");
+			var female = document.getElementById("female");
+
+			// .checked is another property, if the radiobutton is checked, it will return turn otherwise it will return false 
+			if(male.checked){alert("Male is selected")}
+			if(female.checked){alert("Female is selected")}
+		}
+
+		// function retWL() {
+		// 	var wishlist = document.getElementsByName("wishlist"); // a collection of items
+		// 	var wishes="your wishes: ";
+
+		// 	if (wishlist[0].checked){
+		// 		wishes=wishes+wishlist[0].value+ " "
+		// 	}
+		// 	if (wishlist[1].checked){
+		// 		wishes=wishes+wishlist[1].value+ " "
+		// 	}
+		// 	if (wishlist[2].checked){
+		// 		wishes=wishes+wishlist[2].value+ " "
+		// 	}
+
+		// 	// alert(wishes=="your wishes: "?"You have no wishes":wishes)
+
+		// 	if (wishes=="your wishes: "){wishes="You have no wish"}
+
+		// 		alert(wishes)
+
+		// }
+
+		function retWL1() {
+			var wishlist = document.getElementsByName("wishlist"); // a collection of items
+			var wishes="your wishes: ";
+
+			for(var i=0; i < wishlist.length; i++) {
+
+				if(wishlist[i].checked) {wishes=wishes+wishlist[i].value+ " "}
+			}
+				if (wishes=="your wishes: ") {wishes="You have no wish"}
+				alert(wishes)
+			}	
+		
+	</script>
+	
+</body>
+</html>

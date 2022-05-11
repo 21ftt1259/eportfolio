@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+</head>
+<body id="page">
+
+	<!-- <input type="text" id="color" onkeyup="colorChanger1()"><button onclick="colorChanger()">Change Color</button> -->
+	<input type="text" onkeyup="colorChanger2(this.value)"> <!-- this value will retrieve anything inside the textbox without using id -->
+	<button onclick="colorChanger()">Change Color</button>
+
+	<script>
+
+		function colorChanger() {
+			var page = document.getElementById("page");
+			var color = document.getElementById("color");
+
+			page.style.backgroundColor = color.value;
+
+		}
+		// function colorChanger1() {
+		// 	var color = document.getElementById("color");
+		// 	document.body.style.backgroundColor=color.value;
+		// }
+
+		function colorChanger2(color) {
+		 	document.body.style.backgroundColor=color; //color.value needed only if it use id, getElementById
+		}
+
+		
+
+	</script>
+
+</body>
+</html>
