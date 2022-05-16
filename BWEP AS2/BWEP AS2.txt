@@ -1,0 +1,17 @@
+User friendly (ease of use)
+label the function 
+
+9 features
+1) 3 different stories with min 3 pages for each story (9 webpages)
+2) Randomizer for the story
+3) LocalStorage - save and retrieve
+4) Languages (English and Malay)
+5) Read out loud (atleast 2 voices) use HTML5 Speech Synthesis (use LocalStorage 
+to save the latest one) ()
+6) using LocalStorage to save the rating 
+7) desktop and mobile friendly (using grid box)
+8) MOBILE VIEW only have limited features (no rating, only average rating)
+9) font size (for desktop only)
+visually impared: high contrast, low contrast (using LocalStorage)
+
+F12 -> Application -> storage -> LocalStorage

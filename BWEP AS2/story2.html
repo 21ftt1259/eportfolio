@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Story 2</title>
+
+	<style type="text/css">
+
+		body {
+			background-color: skyblue;
+			padding: 30px;
+			display: grid;
+			grid-row: auto;
+		}
+
+		.container {
+			background-color: peachpuff;
+			margin: auto;
+			height: 800px;
+			width: 1000px;
+			padding: 30px 30px;
+			font-size: 20px;
+		}
+
+		.menu {
+			text-align: center;
+			background-color: pink;
+		}
+
+		.setting {
+			grid-row-start: 1;
+			grid-row-end: 4;
+			grid-column-end: 4
+
+		}
+
+	</style>
+</head>
+<body>
+<div class="container">
+<!-- <div class="menu"><a href="">Story 1</a> | <a href="#">Story 2</a> | <a href="#"> Story 3</a> | </div><br> -->
+
+<div class="story2" id="text">
+<h1>The Mighty Babau</h1>
+	
+<p>The villagers of Kampong Serai were scared and they had good reason to be! Nearly every night a tiger roamed their village. Nobody felt safe anymore and they decided something had to be done. They had to catch this tiger but how could they do this?<br><br>
+ 
+At the start of a working day in the fields, Babau, a buffalo, was being readied to plough all day long in the searing heat. The villagers mocked him by singing:<br><br>
+
+Babau, Babau
+Foolish Babau,
+Babau, Babau
+Fat Babau,
+Babau, Babau
+Lazy Babau,
+Babau, Babau
+You are a fool, Babau,
+What are you going to do?</p>
+
+<p>When they had finished singing the villagers realized that Babau could be used as the bait to catch the tiger. Babau was big and so appetizing to a fierce hungry tiger! Babau understood the plan and was saddened to hear that he was to be sacrificed but he was helpless. Indeed, what was he going to do?<br><br>
+
+The plan was set for the following day but for now work had to be done. At the end of the day, as usual, the villagers sang to the exhausted Babau:<br><br>
+
+Babau, Babau
+Foolish Babau,
+Babau, Babau
+Fat Babau,
+Babau, Babau
+Lazy Babau,
+Babau, Babau
+You are a fool, Babau,
+What are you going to do?<br><br>
+
+ That evening Babau was brought to the middle of the jungle and was tied to a tree. The villagers hid in a hut on a tree top. The tiger appeared but Babau pretended he was already dead instinctively knowing that the tiger preferred fresh meat. The tiger, believing Babau to be dead, turned his back and started to leave. Babau saw his chance to strike the tiger’s stomach with his horns inflicting injury enough to scare the tiger away. He never came back.</p>
+
+<p>The villagers were surprised by the intelligence, cunning, bravery, and swiftness of Babau. Was this the same Babau they called foolish, fat, and lazy every day?<br><br>
+
+The next morning the villagers were not sure how to treat Babau. But Babau held no grudges and in fact he was ready to be put to work as usual. Embarrassed by their treatment of Babau the villagers came up with a different version of their song:<br><br>
+ 
+Babau Babau
+Cunning Babau,
+Babau Babau
+Strong Babau,
+Babau, Babau,
+Brave and mighty Babau,
+Babau, Babau
+Smart Babau,
+What are you going to do
+Now that we respect you?</p>
+</div>
+
+</div>
+
+<div class="setting">
+	<h2>Font Size</h2>
+<span style="font-size:1em" onclick="sizeChanger(1)">A</span>
+<span style="font-size:1.5em" onclick="sizeChanger(2)">A</span>
+<span style="font-size:2em" onclick="sizeChanger(3)">A</span>
+<span style="font-size:2.5em" onclick="sizeChanger(4)">A</span>
+
+<script type="text/javascript">
+	
+	function sizeChanger(pilihan) {
+		var text = document.getElementById("text");
+
+		switch(pilihan) {
+			case 1: text.style.fontSize="1em"; break;
+			case 2: text.style.fontSize="1.5em"; break;
+			case 3: text.style.fontSize="2em"; break;
+			case 4: text.style.fontSize="2.5em"; break;
+			case 5: text.style.fontSize="3em"; break;
+		}
+	}
+</script>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>story 1</title>
+
+	<style type="text/css">
+
+		body {
+			background-color: skyblue;
+			padding: 30px;
+			display: grid;
+			grid-row: auto;
+			grid-column: auto;
+		}
+
+		.container {
+			background-color: peachpuff;
+			margin: auto;
+			height: 800px;
+			width: 1000px;
+			padding: 30px 30px;
+			font-size: 20px;
+		}
+
+		.menu {
+			text-align: center;
+			background-color: pink;
+		}
+
+		.pagination {
+			display: inline-block;
+			margin: auto;
+		}
+
+		.pagination a {
+			color: black;
+			float: left;
+  			padding: 8px 16px;
+  			text-decoration: none;
+		}
+
+		.pagination a.active {
+		  background-color: #4CAF50;
+		  color: white;
+		}
+
+		.pagination a:hover:not(.active) {background-color: #ddd;}
+
+		.setting {
+			grid-row-start: 1;
+			grid-row-end: 4;
+			grid-column-end: 4;
+
+		}
+
+		@media screen and (max-width: 479px) {
+
+			.container {
+				width: 100%;
+			}
+
+			.container>div:nth-child(1) {
+				
+				font-size: 10px;
+			}
+
+			.setting {
+				visibility: hidden;
+			}
+
+		}
+
+	</style>
+
+	</style>
+</head>
+<body>
+<div class="container">
+<!-- <div class="menu"><a href="">Story 1</a> | <a href="story2.html" target="iframe1">Story 2</a> | <a href="#"> Story 3</a> | </div><br> -->
+
+
+<div class="story1" id="text">
+<h1>Nakhoda Manis</h1>
+
+<p>Once upon a time there was a widow, Dang Ambon, who lived with her only son in Kampong Ayer. They lived a comfortable life but were certainly not rich. She loved her son Manis so very much. As a boy she used to sing this lullaby to him: <br><br>
+
+Manis, Manis,
+My sweet natured boy!
+Manis, Manis,
+Devoted and kind,
+Manis, Manis,
+Truly a mother’s pride!<br><br>
+
+When he was older Manis wanted to travel. He wanted to become rich. As a loving mother Dang Ambon knew she would miss him terribly. But because her love was so strong she allowed him to go. She wanted him to be the happiest he could possibly be.</p>
+
+<p>For a long time there was no news from Manis. To console herself in her loneliness Dang Ambon sang her song everyday:<br><br>
+
+Manis, Manis,
+My sweet natured boy!
+Manis, Manis,
+Devoted and kind,
+Manis, Manis,
+Truly a mother’s pride!<br><br>
+
+Many years passed and there was still no news from Manis. Dang Ambon kept herself busy by helping the poor. She gave whatever she could until the day she herself became poor. Despite her now sad situation she still sang everyday:<br><br>
+
+Manis, Manis,
+My sweet natured boy!
+Manis, Manis,
+Devoted and kind,
+Manis, Manis,
+Truly a mother’s pride!</p>
+
+<p>One day a large trading ship docked at Kampong Ayer. There was a rumour that the owner of the ship was Manis! He was already called Nakhoda Manis for being the rich captain of the ship. Excitedly Dang Ambon paddled her small boat in the direction of the big ship. She was to be reunited with her beloved Manis! In anticipation she sang:<br><br>
+
+Manis, Manis,
+My sweet natured boy!
+Manis, Manis,
+Devoted and kind,
+Manis, Manis,
+Truly a mother’s pride!<br><br>
+
+Nakhoda Manis was proud and he was indeed rich. When he saw his mother he was ashamed of her and turned away claiming not to know this poor old woman. Dang Ambon was heartbroken. In her despair she cursed the ship full of riches – riches that had taken her son’s love away from her.<br><br>
+
+She would never sing her song again…<br><br>
+
+Suddenly, lighting flashed and there was a heavy storm. Rain, thunder and lightning!!!<br><br>
+
+When the storm cleared, her son’s ship was gone and in its place was a huge rock in the sea.<br><br>
+
+Today this rock is known as Jong Batu.</p>
+</div><br>
+
+<div class="pagination">
+  <a href="#">&laquo;</a>
+  <a class="active" href="#">1</a>
+  <a href="#">2</a>
+  <a href="#">3</a>
+  <a href="#">&raquo;</a>
+</div>
+
+</div>
+<div class="setting">
+	<h2>Font Size</h2>
+<span style="font-size:1em" onclick="sizeChanger(1)">A</span>
+<span style="font-size:1.5em" onclick="sizeChanger(2)">A</span>
+<span style="font-size:2em" onclick="sizeChanger(3)">A</span>
+
+</div>
+
+<script type="text/javascript">
+	
+	function sizeChanger(pilihan) {
+		var text = document.getElementById("text");
+
+		switch(pilihan) {
+			case 1: text.style.fontSize="1em"; break;
+			case 2: text.style.fontSize="1.5em"; break;
+			case 3: text.style.fontSize="2em"; break;
+			
+			
+		}
+
+		const saveToLocalStorage () {
+
+			localStorage.setItem('story1', text.textContent )
+
+		}
+	}
+</script>
+
+
+</body>
+</html>

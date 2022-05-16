@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+
+
+<style type="text/css">
+	
+	.container {
+		display: grid;
+		grid-template-columns: 60% 40%;
+		width: 80%;
+		border: 1px solid;
+		margin: 0 auto;
+		grid-gap: 1.5em 1.5em;
+		grid
+	}
+
+	.grid1 {
+		display: grid;
+		grid-template-rows: 20% 60% 20%;
+		border: 1px solid;
+		text-align: center;
+	}
+
+	.grid2 {
+		display: grid;
+		grid-template-rows: 10% 30% 5% 30% 5% 30% 5%;
+		overflow-y: scroll;
+		overflow-x: hidden;
+		border: 1px solid;
+		margin: 0 auto;
+		text-align: center;
+	}
+
+	.container>div:nth-child(1) {
+		grid-column-start: 1;
+		grid-column-end: 2;
+	}
+
+
+	.container>div:nth-child(2) {
+		grid-column-start: 2;
+		grid-column-end: 3;
+	}
+
+	img {
+		width: 60%;
+		height: 80%;
+	}
+
+
+</style>
+</head>
+<body onload="randomStory()">
+
+
+<div class="container">
+
+	<div class="grid1">
+
+		<h1><div id="title"></div></h1>
+		<div><img id="image"></div>
+		<h2><div id="story"></div></h2>
+		
+	</div>
+
+	<div class="grid2">
+		
+		<div><h1>AVAILABLE STORY</h1></div>
+		<div><img src="Images/NM.jpg"></div>
+		<h3><div><a href="">Nahkoda Manis</a></div></h3>
+		<div><img src="Images/TMB.jpg"></div>
+		<h3><div><a href="">The Mighty Babau</a></div></h3>
+		<div><img src="Images/TCMD.jpg"></div>
+		<h3><div><a href="">The Clever Mouse Deer</a></div></h3>
+
+	</div>
+
+</div>
+
+<script type="text/javascript">
+
+	function randomStory() {
+
+		var title1 = "NAHKODA MANIS";
+		var title2 = "THE MIGHTY BABAU";
+		var title3 = "THE CLEVER MOUSE DEER";
+
+		var story1 = "Once upon a time there was a widow, Dang Ambon, who lived with her only son in Kampong Ayer. They lived a comfortable life but were certainly not rich. She loved her son Manis so very much.";
+
+		var story2 = "The villagers of Kampong Serai were scared and they had good reason to be! Nearly every night a tiger roamed their village. Nobody felt safe anymore and they decided something had to be done. They had";
+		var story3 = "One day, a buffalo was eating grass by the riverbank when he heard the voice of someone crying in pain. “Help! Help! Please let me free,” heard the buffalo. He ran";
+
+		localStorage.setItem("title1", title1);
+		localStorage.setItem("title2", title2);
+		localStorage.setItem("title3", title3);
+
+		localStorage.setItem("story1", story1);
+		localStorage.setItem("story2", story2);
+		localStorage.setItem("story3", story3);
+
+		var randomNum = Math.ceil(Math.random() * 100 % 3);
+
+		var title = document.getElementById("title");
+		var image = document.getElementById("image");
+		var story = document.getElementById("story");	
+
+		if (randomNum == 1) {
+
+			title.innerHTML = localStorage.getItem("title1");
+			image.src = "Images/NM.jpg";
+			story.innerHTML = localStorage.getItem("story1");
+			
+		}
+
+		else if (randomNum == 2) {
+			title.innerHTML = localStorage.getItem("title2");
+			image.src = "Images/TMB.jpg";
+			story.innerHTML = localStorage.getItem("story2");
+			
+		}
+
+		else if (randomNum == 3) {
+
+			title.innerHTML = localStorage.getItem("title3");
+			image.src = "Images/TCMD.jpg";
+			story.innerHTML = localStorage.getItem("story3");		
+		}
+	}
+
+
+</script>
+
+
+</body>
+</html>
