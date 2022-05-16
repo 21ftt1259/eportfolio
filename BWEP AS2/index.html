@@ -15,7 +15,6 @@
 		border: 1px solid;
 		margin: 0 auto;
 		grid-gap: 1.5em 1.5em;
-		grid
 	}
 
 	.grid1 {
@@ -49,6 +48,34 @@
 	img {
 		width: 60%;
 		height: 80%;
+	}
+
+	@media screen and (max-width: 479px) {
+
+		.container {
+			display: grid;
+			grid-template-columns: 1fr;
+			/*border: none;*/
+			width: 180vh;
+			grid-template-rows: auto auto;
+			margin: 0 auto;
+		}
+
+		.grid1 {
+
+			width: 150vh;
+			margin: 0 auto;
+		}
+
+		.container>div:nth-child(2) {
+
+			width: 150vh;
+			grid-column-start: 1;
+			grid-column-end: 2;
+			grid-row-start: 2;
+			grid-row-end: 3;
+		}
+
 	}
 
 
