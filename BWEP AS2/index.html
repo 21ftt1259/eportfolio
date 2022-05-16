@@ -55,26 +55,54 @@
 		.container {
 			display: grid;
 			grid-template-columns: 1fr;
-			/*border: none;*/
+			border: none;
 			width: 180vh;
 			grid-template-rows: auto auto;
 			margin: 0 auto;
 		}
 
+
+
 		.grid1 {
 
-			width: 150vh;
+			width: 100vh;
 			margin: 0 auto;
+			font-size: 20px;
 		}
+
+		.grid2 {
+			display: grid;
+			grid-template-rows: 10% 30% 5% 30% 5% 30% 5%;
+			overflow-y: hidden;
+			overflow-x: hidden;
+			border: 1px solid;
+			margin: 0 auto;
+			text-align: center;
+	}
 
 		.container>div:nth-child(2) {
 
-			width: 150vh;
+			width: 100vh;
 			grid-column-start: 1;
 			grid-column-end: 2;
 			grid-row-start: 2;
 			grid-row-end: 3;
 		}
+
+		img {
+
+			width: 60%;
+			height: 70%;
+		}
+
+		h1 {
+			font-size: 20px;
+		}
+
+		h2 {
+			font-size: 15px;
+		}
+
 
 	}
 
