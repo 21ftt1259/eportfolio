@@ -19,19 +19,28 @@
 
 	.grid1 {
 		display: grid;
-		grid-template-rows: 20% 60% 20%;
+		grid-template-rows: 10% 50% 10%;
 		border: 1px solid;
 		text-align: center;
+		height: 60%;
 	}
 
 	.grid2 {
 		display: grid;
-		grid-template-rows: 10% 30% 5% 30% 5% 30% 5%;
-		overflow-y: scroll;
-		overflow-x: hidden;
+		grid-template-rows: 10% 25% 5% 25% 5% 25% 5%;
 		border: 1px solid;
 		margin: 0 auto;
 		text-align: center;
+		border-collapse: collapse;
+	}
+
+	.grid2>div:nth-child(even) {
+		margin-top: 65px;
+	}
+
+	.grid2>div>img {
+		width: 80%;
+		height: 100%;
 	}
 
 	.container>div:nth-child(1) {
@@ -45,9 +54,18 @@
 		grid-column-end: 3;
 	}
 
-	img {
-		width: 60%;
+	#image {
+		width: 90%;
 		height: 80%;
+		margin-top: 60px;
+	}
+
+	h3 {
+		margin-top: 5px;
+	}
+	a {
+		text-decoration: none;
+		color: steelblue;
 	}
 
 	@media screen and (max-width: 479px) {
@@ -56,29 +74,32 @@
 			display: grid;
 			grid-template-columns: 1fr;
 			border: none;
-			width: 180vh;
 			grid-template-rows: auto auto;
 			margin: 0 auto;
 		}
 
-
-
 		.grid1 {
 
-			width: 80vh;
+			width: 95%;
 			margin: 0 auto;
+			margin-top: 70px;
 			font-size: 20px;
+
+		}
+
+		.grid1>div:nth-child(2) {
+			margin-bottom: 150px;
 		}
 
 		.grid2 {
 			display: grid;
-			grid-template-rows: 10% 30% 5% 30% 5% 30% 5%;
-			overflow-y: hidden;
-			overflow-x: hidden;
+			grid-template-rows: 10% 20% 5% 20% 5% 20% 5%;
 			border: 1px solid;
 			margin: 0 auto;
 			text-align: center;
-	}
+			width: 55%;
+		}
+
 
 		.container>div:nth-child(2) {
 
@@ -87,6 +108,11 @@
 			grid-column-end: 2;
 			grid-row-start: 2;
 			grid-row-end: 3;
+		}
+
+		#image {
+			height: 180%;
+			width: 80%;
 		}
 
 		img {
@@ -118,6 +144,7 @@
 
 		<h1><div id="title"></div></h1>
 		<div><img id="image"></div>
+		<div>Rating</div>
 		<h2><div id="story"><a href="">Read more..</a></div></h2>
 		
 	</div>
