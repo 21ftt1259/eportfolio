@@ -159,11 +159,11 @@
 		
 		<div><h1>AVAILABLE STORY</h1></div>
 		<div><img src="Images/NM.jpg"></div>
-		<h3><div><a href="">Nahkoda Manis</a></div></h3>
+		<h3><div><a href="story1.html">Nahkoda Manis</a></div></h3>
 		<div><img src="Images/TMB.jpg"></div>
-		<h3><div><a href="">The Mighty Babau</a></div></h3>
+		<h3><div><a href="story2.html">The Mighty Babau</a></div></h3>
 		<div><img src="Images/TCMD.jpg"></div>
-		<h3><div><a href="">The Clever Mouse Deer</a></div></h3>
+		<h3><div><a href="story3.html">The Clever Mouse Deer</a></div></h3>
 
 	</div>
 
@@ -195,12 +195,6 @@
 		localStorage.setItem("story2", story2);
 		localStorage.setItem("story3", story3);
 
-		localStorage.setItem("story1Malay", story1Malay);
-		localStorage.setItem("story2Malay", story2Malay);
-		localStorage.setItem("story3Malay", story3Malay);
-
-
-
 		var randomNum = Math.ceil(Math.random() * 100 % 3);
 
 		var title = document.getElementById("title");
@@ -231,6 +225,10 @@
 	}
 
 	function translator() {
+
+		localStorage.setItem("story1Malay", story1Malay);
+		localStorage.setItem("story2Malay", story2Malay);
+		localStorage.setItem("story3Malay", story3Malay);
 
 		var choice = document.getElementById("translate");
 
