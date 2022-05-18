@@ -384,7 +384,7 @@
 	}
 
 	btnSpeak.addEventListener('click', ()=>{
-			var toSpeak = new SpeechSynthesisUtterance(localStorage.getItem("story1Page1Malay"));
+			var toSpeak = new SpeechSynthesisUtterance(localStorage.getItem("story1Page1"));
 			var selectedVoiceName = voicelist.selectedOptions[0].getAttribute('data-name');
 			voices.forEach((voice)=>{
 				if(voice.name === selectedVoiceName){
