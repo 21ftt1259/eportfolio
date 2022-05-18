@@ -12,7 +12,7 @@
 		margin: 0;
 		padding: 0;
 		height: 100vh;
-		display: flex;
+		/*display: flex;*/
 		justify-content: center;
 		align-items: center;
 		font-family: "Roboto", sans-serif;
@@ -28,18 +28,24 @@
 		height: 100%;
 	}
 
+	h2 {
+		text-align: center;
+		font-size: 2em;
+	}
+
 	.book {
 		display: flex;
+		justify-content: center;
 	}
 
 	#cover {
-		width: 460px;
-		height: 410px;
+		width: 530px;
+		height: 630px;
 	}
 
 	.flip-book{
-		width: 460px;
-		height: 410px;
+		width: 530px;
+		height: 630px;
 		position: relative;
 		perspective: 1500px;
 	}
@@ -102,23 +108,23 @@
 		color: #807f7d;
 	}
 
+	#setting {
+		width: 55%;
+		height: 100px;
+		/*border: 1px solid;*/
+		text-align: center;
+		margin: 0 auto;
+	}
+
 	#p1 {
-		z-index: 5;
-	}
-
-	#p2 {
-		z-index: 4;
-	}
-
-	#p3 {
 		z-index: 3;
 	}
 
-	#p4 {
+	#p2 {
 		z-index: 2;
 	}
 
-	#p5 {
+	#p3 {
 		z-index: 1;
 	}
 
@@ -137,31 +143,21 @@
 		z-index: 3;
 	}
 
-	#c4:checked ~ .flip-book #p4 {
-		transform: rotateY(-180deg);
-		z-index: 3;
-	}
-
-	#c5:checked ~ .flip-book #p5 {
-		transform: rotateY(-180deg);
-		z-index: 3;
-	}
 </style>
 
 </head>
 <body>
 
 	<!-- Book START -->
-	<div class="book">
+	<h2>Singapore, The Lion City</h2>
+	<div class="book" id="text">
 
 		<input type="checkbox" id="c1">
 		<input type="checkbox" id="c2">
 		<input type="checkbox" id="c3">
-		<input type="checkbox" id="c4">
-		<input type="checkbox" id="c5">
 
 		<!-- 1st Page -->
-		<div id="cover"><img src="images/mousedeer.jpg"></div>
+		<div id="cover"><img src="images/sg.jpg"></div>
 
 		<div class="flip-book">
 
@@ -169,73 +165,53 @@
 
 				<!-- Back Button START -->
 				<div class="back">
-					<img src="images/mousedeer.jpg">
+					<img src="images/sg.jpg">
 					<label class="back-btn" for="c1">Back</label>
 				</div>
 				<!-- Back Button END -->
 
-				<div class="front">
-					<h2>The Clever Mouse Deer</h2>
-				<p>One day, a buffalo was eating grass by the riverbank when he heard the voice of someone crying in pain.</p>
- 
-				<p>“Help! Help! Please let me free,” heard the buffalo. He ran to the river where the voice came from. There he found a crocodile with a big log on his back. “Help me, Mr Buffalo! This log fell on my back. I cannot move and I’m in pain,” cried the crocodile.</p>
-
-				<p>Feeling sorry for the crocodile, the buffalo used his strong horn to lift the log off the crocodile. The log was very heavy. The buffalo tried with all his might until the crocodile was free.</p>
-
-				<p>“Thank you, Mr Buffalo! You are very kind to help me,” said the crocodile.</p>
-
+				<div class="front" id="page1"></div>
+			
+			
 					<!-- Next Button START -->
 					<label class="next-btn" for="c1">Next</label>
 					<!-- Next Button END -->
 
-				</div>
-
 			</div>
+
+			<!-- PAGE 2  -->
 
 			<div class="flip" id="p2">
 
 				<!-- Back Button START -->
 				<div class="back">
-					<img src="images/mousedeer.jpg">
+					<img src="images/sg.jpg">
 					<label class="back-btn" for="c2">Back</label>
 				</div>
 				<!-- Back Button END -->
 
-				<div class="front">
+				<div class="front" id="page2"></div>
 
-					<p>“You are welcome,” replied the buffalo. “I’m happy to be of help to you.”</p>
-
-					<p>As the buffalo was leaving, the crocodile suddenly bit one of the buffalo’s legs. The buffalo screamed in pain. The crocodile said, “I’m very hungry, Mr Buffalo. I cannot help wanting to eat your leg.”</p>
-
-					<p>The buffalo was disappointed at the crocodile, whose life the buffalo saved. The buffalo could not believe that the crocodile would return his kindness that way.</p>
-
-					<p>The mouse deer was passing by and saw the buffalo’s leg in the mouth of the crocodile. He asked the buffalo what happened.</p>
 
 					<!-- Next Button START -->
 					<label class="next-btn" for="c2">Next</label>
 					<!-- Next Button END -->					
-
-				</div>
+				
 			</div>
+
+			<!-- PAGE 3 -->
 
 			<div class="flip" id="p3">
 
 				<!-- Back Button START -->
 				<div class="back">
-					<img src="images/mousedeer.jpg">
+					<!-- <img src="images/sg.jpg"> -->
 					<label class="back-btn" for="c3">Back</label>
 				</div>
 				<!-- Back Button END -->
 
-				<div class="front">
+				<div class="front" id="page3"></div>
 
-					<p>“I saved the crocodile’s life by removing the log off his back. But now he wants to have me for dinner!” the buffalo cried, having been let down by the crocodile. The mouse deer thought for a moment. “Hmmm... I could not believe that the buffalo has the strength to lift such a big and heavy log off the crocodile,” the mouse deer exclaimed.</p>
-
-					<p>“It’s the truth. I lifted the log by myself,” replied the buffalo proudly.</p>
-
-					<p>“He is telling the truth, Mr Mouse Deer,” added the crocodile.</p>
-
-					<p>The mouse deer replied, “I will only believe in your strength, Mr Buffalo, if I see you lift the log.” The mouse deer then asked the crocodile to free the buffalo’s leg. The crocodile was curious what the mouse deer was up to so he released the buffalo.</p>
 
 					<!-- Next Button START -->
 					<label class="next-btn" for="c3">Next</label>
@@ -245,78 +221,87 @@
 
 			</div>
 
-			<div class="flip" id="p4">
-
-				<!-- Back Button START -->
-				<div class="back">
-					<img src="images/mousedeer.jpg">
-					<label class="back-btn" for="c4">Back</label>
-				</div>
-				<!-- Back Button END -->
-
-				<div class="front">
-					<p>“Now that you’re free, Mr Buffalo, put the log back on the crocodile’s back. Prove to me you are strong enough to lift the log,” said the mouse deer.</p>
-
-					<p>The buffalo was challenged to prove his strength to the mouse deer. He gathered all his might to lift the heavy log until it was again on the crocodile’s back. The crocodile screamed in pain as the log landed on his body. “Oh no! Please take this log off me, Mr Buffalo,” pleaded the crocodile.</p>
-
-					<p>“Aha, I got you! You fell into my trick,” exclaimed the mouse deer. “Now that you are in pain, Mr Crocodile, you know how the buffalo felt when you bit his leg.”</p>
-
-					<p>The buffalo wanted to relieve the crocodile of his pain. “But if I free him this time, he might want to bite me again,” thought the buffalo.</p>
-
-					<!-- Next Button START -->
-					<label class="next-btn" for="c4">Next</label>
-					<!-- Next Button END -->
-
-				</div>
-
-			</div>
-
-			<div class="flip" id="p5">
-
-				<!-- Back Button START -->
-				<div class="back">
-					<!-- <img src="images/mousedeer.jpg"> -->
-					<label class="back-btn" for="c5">Back</label>
-				</div>
-				<!-- Back Button END -->
-
-				<div class="front">
-					<p>The crocodile replied, “I realize I have been ungrateful to the buffalo. I’m sorry for what I did, Mr Buffalo. I promise not to harm you again. Only you have the strength to help me.”</p>
-
-					<p>The mouse deer and the buffalo felt the sincerity of the crocodile. The buffalo again used all his strength to lift the log off the crocodile’s back.</p>
-
-					<p>“Thank you, Mr Buffalo. You are very compassionate,” said the crocodile.</p>
-
-					<p>“Thank you, Mouse Deer, for teaching me to be kind to those who help me.”</p>
-
-					<p>The mouse deer was happy to hear that the crocodile learned his lesson. He was also glad that the buffalo was safe. Once again, the mouse deer used his cleverness to help other animals.</p>
-
-					<!-- Next Button START -->
-					<label class="next-btn" for="c5">Next</label>
-					<!-- Next Button END -->
-
-				</div>
-
-			</div>
-			
-
 		</div>
 
-	</div>
 	<!-- Book END -->
 
+	
+<h3>Font Size</h3>
+<span style="font-size:1em" onclick="sizeChanger(1)">A</span>
+<span style="font-size:1.2em" onclick="sizeChanger(2)">A</span>
+<span style="font-size:1.5em" onclick="sizeChanger(3)">A</span>
+
+<select name="language" id="translate" onclick="translator()">
+		<option value="English">English</option>
+		<option value="Malay">Malay</option>
+</div>
+	
+	<script type="text/javascript">
+
+		var story3Page1 = "It is said that long, long ago, a prince in Palembang called Sang Nila Utama was bored. He decided to go hunting with his men. In the woods they saw a deer, but as he tried to shoot, it moved swiftly. The prince and his men followed, trying to catch it.The deer disappeared, but from the hill where it had led them, the prince had a good view of the surrounding islands.Looking out into the distance, Sang Nila Utama saw an island that he had not seen before. It had sands that shimmered white on the beach. “What is that island?” he asked his men. “Temasek,” they answered. “Let us go there!” said the prince."
+
+		var story3Page2 = "As they sailed towards Temasek however, a storm arose. The wind blew hard and the waves rose higher and higher.The boat was battered and in danger of capsizing. To lighten the load and help keep it afloat, Sang Nila Utama’s men began throwing overboard the cargo they carried. But still the storm grew fiercer. They tried throwing everything that they could possibly manage without. They knew their lives were more important. However, the boat continued to sink.One of his trusted advisors said to Sang Nila Utama, “Throw your crown overboard! It is the heaviest thing left on board.” Perhaps the advisor had remembered an old story that said that Sang Nila Utama was one of the descendants of the Sea King’s daughter. When the prince threw his crown overboard, the storm abated and the seas were calm once again. So, they continued their journey."
+
+		var story3Page3 = "When Sang Nila Utama and his men landed on the shores of Temasek, he caught sight of another animal, one that he had never seen before. It was magnificent with a black head, a white neck, and a red body. It looked deep into the prince’s eyes. Then it disappeared from view.“What is that animal?” he asked his men. No one really knew, but one of the ministers said, “I have heard that there is an animal that looks magnificent and regal like that. They call it singa or lion.Sang Nila Utama liked what he saw of the island. It was time he had his own place to rule and he thought the sighting of the singa was an auspicious sign. “This is where I shall live,” he said. “We shall call this place ‘Singapura’ or ‘Lion City.’ And that, they say, is how Singapore got its name!"
+
+		var story3Page1Malay = "kononnya sejak dahulu kala, seorang putera raja di Palembang bernama Sang Nila Utama bosan. Dia memutuskan untuk pergi memburu bersama anak buahnya. Di dalam hutan mereka melihat seekor rusa, tetapi ketika dia cuba menembak, ia bergerak dengan pantas. Putera raja dan orang-orangnya mengikuti, cuba menangkapnya. Rusa itu hilang, tetapi dari bukit tempat ia membawa mereka, putera raja dapat melihat pulau-pulau di sekelilingnya dengan baik. Melihat ke jauh, Sang Nila Utama melihat sebuah pulau yang dia tidak pernah melihat sebelum ini. Ia mempunyai pasir yang berkilauan putih di pantai. “Pulau apakah itu?” dia bertanya kepada anak buahnya. “Temasek,” jawab mereka. “Mari kita pergi ke sana!” kata putera raja."
+
+		var story3Page2Malay = "Walau bagaimanapun, semasa mereka belayar menuju Temasek, ribut timbul. Angin bertiup kencang dan ombak semakin tinggi. Bot itu dipukul dan dalam bahaya terbalik. Untuk meringankan beban dan membantu mengekalkannya, orang-orang Sang Nila Utama mula membuang kargo yang mereka bawa ke laut. Tetapi masih ribut semakin ganas. Mereka cuba membuang segala-galanya yang mungkin mereka boleh uruskan tanpanya. Mereka tahu nyawa mereka lebih penting. Namun, perahu itu terus karam. Salah seorang penasihatnya yang dipercayai berkata kepada Sang Nila Utama, “Lemparkan mahkotamu ke laut! Ia adalah perkara paling berat yang tinggal di atas kapal.” Mungkin penasihat itu teringat satu kisah lama yang mengatakan bahawa Sang Nila Utama adalah salah seorang daripada keturunan puteri Raja Laut. Apabila putera raja melemparkan mahkotanya ke laut, ribut itu reda dan laut menjadi tenang sekali lagi. Maka, mereka meneruskan perjalanan."
+
+		var story3Page3Malay = "Apabila Sang Nila Utama dan orang-orangnya mendarat di pantai Temasek, dia ternampak seekor binatang lain, yang tidak pernah dilihatnya sebelum ini. Ia sangat mengagumkan dengan kepala hitam, leher putih, dan badan merah. Ia memandang jauh ke dalam mata putera raja. Kemudian ia hilang dari pandangan.“Haiwan apakah itu?” dia bertanya kepada anak buahnya. Tiada siapa yang benar-benar tahu, tetapi salah seorang menteri berkata, “Saya telah mendengar bahawa ada haiwan yang kelihatan hebat dan agung seperti itu. Mereka memanggilnya singa atau singa.Sang Nila Utama menyukai apa yang dilihatnya tentang pulau itu. Sudah tiba masanya dia mempunyai tempat sendiri untuk memerintah dan dia fikir melihat singa itu adalah satu petanda yang baik.Di sinilah saya akan tinggal. katanya. “Kami akan memanggil tempat ini sebagai ‘Singapura’ atau ‘Lion City.’ Dan itu, kata mereka, adalah bagaimana Singapura mendapat namanya!"
+
+
+	localStorage.setItem("story3Page1", story3Page1);
+	localStorage.setItem("story3Page2", story3Page2);
+	localStorage.setItem("story3Page3", story3Page3);
+
+	localStorage.setItem("story3Page1Malay", story3Page1Malay);
+	localStorage.setItem("story3Page2Malay", story3Page2Malay);
+	localStorage.setItem("story3Page3Malay", story3Page3Malay);
+
+	var page1 = document.getElementById("page1");
+	var page2 = document.getElementById("page2");
+	var page3 = document.getElementById("page3");
+
+	page1.innerHTML = localStorage.getItem("story3Page1");
+	page2.innerHTML = localStorage.getItem("story3Page2");
+	page3.innerHTML = localStorage.getItem("story3Page3");
+
+
+		function translator(){
+
+		var choice = document.getElementById("translate");
+
+			if(choice.value == "English") {
+
+				page1.innerHTML = localStorage.getItem("story3Page1");
+				page2.innerHTML = localStorage.getItem("story3Page2");
+				page3.innerHTML = localStorage.getItem("story3Page3");
+			}
+
+			else if (choice.value == "Malay") {
+
+				page1.innerHTML = localStorage.getItem("story3Page1Malay");
+				page2.innerHTML = localStorage.getItem("story3Page2Malay");
+				page3.innerHTML = localStorage.getItem("story3Page3Malay");
+			}
+
+		
+		}
+
+
+	function sizeChanger(sizes) {
+		var text = document.getElementById("text");
+
+		switch(sizes) {
+			case 1: text.style.fontSize="1em"; break;
+			case 2: text.style.fontSize="1.2em"; break;
+			case 3: text.style.fontSize="1.5em"; break;
+		}
+	}
+		
+	</script>
 
 
 </body>
 </html>
-
-	<!-- Previous Button START -->
-<!-- 	<button id="prev-btn">
-		<i class="fas fa-arrow-circle-left"></i>
-	</button> -->
-	<!-- Previous Button END -->
-	<!-- Next Button START -->
-<!-- 	<button id="next-btn">
-		<i class="fas fa-arrow-circle-right"></i>
-	</button> -->
-	<!-- Next Button END -->

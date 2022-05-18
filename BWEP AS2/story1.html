@@ -12,7 +12,7 @@
 		margin: 0;
 		padding: 0;
 		height: 100vh;
-		display: flex;
+		/*display: flex;*/
 		justify-content: center;
 		align-items: center;
 		font-family: "Roboto", sans-serif;
@@ -28,18 +28,39 @@
 		height: 100%;
 	}
 
+	h2 {
+		text-align: center;
+		font-size: 2em;
+	}
+
+	.container {
+		display: grid;
+		grid-template-rows: auto auto auto;
+	}
+
+	.grid1 {
+		width: 70%;
+		height: 15vh;
+		display: grid;
+		grid-template-columns: 30% 30% 30% 10% 10% 10% 10%;
+		margin: 0 auto;
+		background-color: steelblue;
+	}
+
+
 	.book {
 		display: flex;
+		justify-content: center;
 	}
 
 	#cover {
-		width: 460px;
-		height: 410px;
+		width: 530px;
+		height: 630px;
 	}
 
 	.flip-book{
-		width: 460px;
-		height: 410px;
+		width: 530px;
+		height: 630px;
 		position: relative;
 		perspective: 1500px;
 	}
@@ -99,7 +120,7 @@
 		bottom: 13px;
 		right: 13px;
 		cursor: pointer;
-		color: #807f7d;
+		color: black;
 	}
 
 	#p1 {
@@ -131,154 +152,275 @@
 </style>
 
 </head>
-<body>
+<body onload="save()">
+
+	<div class="container">
+	
+
+	<h2>Nakhoda Manis</h2>
 
 	<!-- Book START -->
-	<div class="book">
+	<div class="book" id="text">
 
 		<input type="checkbox" id="c1">
 		<input type="checkbox" id="c2">
 		<input type="checkbox" id="c3">
 
-		<div id="cover"><img src="images/nakhoda.jpg"></div>
+		<div id="cover"><img src="Images/NM1.jpg"></div>
 
 		<div class="flip-book">
 			<div class="flip" id="p1">
 
 				<!-- Back Button START -->
 				<div class="back">
-					<img src="images/nakhoda.jpg">
+					<img src="Images/NM2.jpg">
 					<label class="back-btn" for="c1">Back</label>
 				</div>
 				<!-- Back Button END -->
 
-				<div class="front">
-					<h2>Nakhoda Manis</h2>
-				<p>Once upon a time there was a widow, Dang Ambon, who lived with her only son in Kampong Ayer. They lived a comfortable life but were certainly not rich. She loved her son Manis so very much. As a boy she used to sing this lullaby to him: <br><br>
+				<!-- FIRST PAGE OF THE STORY -->
 
-				Manis, Manis,<br>
-				My sweet natured boy!<br>
-				Manis, Manis,<br>
-				Devoted and kind,<br>
-				Manis, Manis,<br>
-				Truly a mother’s pride!<br><br></p>
-
-					<!-- Next Button START -->
-					<label class="next-btn" for="c1">Next</label>
-					<!-- Next Button END -->
-				</div>
+				<div class="front" id="page1"></div>
+					
+				
+				<!-- Next Button START -->
+				<label class="next-btn" for="c1">Next</label>
+				<!-- Next Button END -->
 			</div>
 
 			<div class="flip" id="p2">
 
 				<!-- Back Button START -->
 				<div class="back">
-					<img src="images/nakhoda.jpg">
+					<img src="Images/NM3.jpg">
 					<label class="back-btn" for="c2">Back</label>
 				</div>
 				<!-- Back Button END -->
 
-				<div class="front">
+				<!-- SECOND PAGE OF THE STORY -->
 
-					<p>When he was older Manis wanted to travel. He wanted to become rich. As a loving mother Dang Ambon knew she would miss him terribly. But because her love was so strong she allowed him to go. She wanted him to be the happiest he could possibly be.
+				<div class="front" id="page2"></div>
 
-					For a long time there was no news from Manis. To console herself in her loneliness Dang Ambon sang her song everyday:<br><br>
-
-					Manis, Manis,<br>
-					My sweet natured boy!<br>
-					Manis, Manis,<br>
-					Devoted and kind,<br>
-					Manis, Manis,<br>
-					Truly a mother’s pride!<br><br>
-
-					<!-- Next Button START -->
-					<label class="next-btn" for="c2">Next</label>
-					<!-- Next Button END -->					
-				</div>
+				<!-- Next Button START -->
+				<label class="next-btn" for="c2">Next</label>
+				<!-- Next Button END -->	
 			</div>
 
 			<div class="flip" id="p3">
 
 				<!-- Back Button START -->
 				<div class="back">
-					<img src="images/nakhoda.jpg">
+					<img src="Images/END.jpg">
 					<label class="back-btn" for="c3">Back</label>
 				</div>
 				<!-- Back Button END -->
 
-				<div class="front">
+				<!-- THIRD PAGE OF THE STORY -->
 
-					<p>Many years passed and there was still no news from Manis. Dang Ambon kept herself busy by helping the poor. She gave whatever she could until the day she herself became poor. Despite her now sad situation she still sang everyday:<br><br>
+				<div class="front" id="page3"></div>
+					
 
-					Manis, Manis,<br>
-					My sweet natured boy!<br>
-					Manis, Manis,<br>
-					Devoted and kind,<br>
-					Manis, Manis,<br>
-					Truly a mother’s pride!</p>
-
-					<!-- Next Button START -->
-					<label class="next-btn" for="c3">Next</label>
-					<!-- Next Button END -->
-				</div>
-			</div>
-
-			<div class="flip" id="p3">
-
-				<!-- Back Button START -->
-				<div class="back">
-					<img src="images/nakhoda.jpg">
-					<label class="back-btn" for="c3">Back</label>
-				</div>
-				<!-- Back Button END -->
-
-				<div class="front">
-					<p>One day a large trading ship docked at Kampong Ayer. There was a rumour that the owner of the ship was Manis! He was already called Nakhoda Manis for being the rich captain of the ship. Excitedly Dang Ambon paddled her small boat in the direction of the big ship. She was to be reunited with her beloved Manis! In anticipation she sang:<br><br>
-
-					Manis, Manis,<br>
-					My sweet natured boy!<br>
-					Manis, Manis,<br>
-					Devoted and kind,<br>
-					Manis, Manis,<br>
-					Truly a mother’s pride!<br><br></p>
-
-					<!-- Next Button START -->
-					<label class="next-btn" for="c3">Next</label>
-					<!-- Next Button END -->
-				</div>
-			</div>
-
-			<div class="flip" id="p3">
-
-				<!-- Back Button START -->
-				<div class="back">
-					<!-- <img src="images/nakhoda.jpg"> -->
-					<label class="back-btn" for="c3">Back</label>
-				</div>
-				<!-- Back Button END -->
-
-				<div class="front">
-					<p>Nakhoda Manis was proud and he was indeed rich. When he saw his mother he was ashamed of her and turned away claiming not to know this poor old woman. Dang Ambon was heartbroken. In her despair she cursed the ship full of riches – riches that had taken her son’s love away from her.<br><br>
-
-					She would never sing her song again…<br><br>
-
-					Suddenly, lighting flashed and there was a heavy storm. Rain, thunder and lightning!!!<br><br>
-
-					When the storm cleared, her son’s ship was gone and in its place was a huge rock in the sea.<br><br>
-
-					Today this rock is known as Jong Batu.</p>
-
-					<!-- Next Button START -->
-					<label class="next-btn" for="c3">Next</label>
-					<!-- Next Button END -->
-				</div>
+				<!-- Next Button START -->
+				<label class="next-btn" for="c3">Next</label>
+				<!-- Next Button END -->
 			</div>
 
 		</div>
 
 	</div>
+
 	<!-- Book END -->
 
+	<div class="grid1">
+		
+		<div>
+		<h3>Select Language</h3>
+		<select id="translate" onchange="translator()">
+			<option value="0">Select</option>
+			<option value="English">English</option>
+			<option value="Malay">Malay</option>
+		</select>
+		</div>
+
+		
+	<div>
+		<h3>Font Size</h3>
+		<span style="font-size:1em" onclick="sizeChanger(1)">A</span>
+		<span style="font-size:1.2em" onclick="sizeChanger(2)">A</span>
+		<span style="font-size:1.5em" onclick="sizeChanger(3)">A</span>
+	</div>
+
+	<div><h3>Select Voice <select id="voicelist"></select></h3>
+
+	<div>
+		<button id="speak">Speak</button>
+		<button onclick="pause()">Pause</button>
+		<button onclick="resume()">Resume</button>
+		<button onclick="stop()">Stop</button>
+	</div>
+	
+
+
+	</div>
+
+	
+
+	</div>
+
+</div>
+
+
+<script type="text/javascript">
+
+	var story1Page1 = "<br>Once upon a time there was a widow, Dang Ambon, who lived <br>with her only son in Kampong Ayer. They lived a comfortable life but were certainly not rich. She loved her son Manis so very much. As a boy she used to sing this lullaby to him: <br><br> Manis, Manis, <br> My sweet natured boy! <br>Manis, Manis, <br> Devoted and kind, <br> Manis, Manis, <br> Truly a mother’s pride!<br><br> When he was older Manis wanted to travel. He wanted to become rich. As a loving mother Dang Ambon knew she would miss him terribly. But because her love was so strong she allowed him to go. She wanted him to be the happiest he could possibly be."
+
+	var story1Page1Malay = "<br>Dahulu kala ada seorang janda, Dang Ambon, yang tinggal<br>bersama putra satu-satunya di Kampong Ayer. Mereka menjalani kehidupan yang nyaman tetapi tentu saja tidak kaya. Dia sangat mencintai putranya Manis. Sebagai seorang anak laki-laki dia biasa menyanyikan lagu pengantar tidur ini untuknya:<br><br>Manis, Manis, <br> Anakku yang manis! <br> Manis, Manis, <br> Benar-benar kebanggaan seorang ibu!<br> Ketika dia lebih tua Manis ingin bepergian. Dia ingin menjadi kaya. Sebagai ibu yang penuh kasih Dang Ambon tahu dia akan sangat merindukannya. Tapi karena cintanya begitu kuat dia membiarkannya pergi. Dia ingin dia menjadi yang paling bahagia yang dia bisa."
+
+	var story1Page2 = "<br>When he was older Manis wanted to travel. He wanted to become rich. As a loving mother Dang Ambon knew she would miss him terribly. But because her love was so strong she allowed him to go. She wanted him to be the happiest he could possibly be.<br><br>For a long time there was no news from Manis.<br>Many years passed and there was still no news from Manis. Dang Ambon kept herself busy by helping the poor. She gave whatever she could until the day she herself became poor. Despite her now sad situation she still sang everyday.<br><br>One day a large trading ship docked at Kampong Ayer. There was a rumour that the owner of the ship was Manis! He was already called Nakhoda Manis for being the rich captain of the ship. Excitedly Dang Ambon paddled her small boat in the direction of the big ship. She was to be reunited with her beloved Manis!"
+
+	var story1Page2Malay = "<br>Ketika dia lebih tua Manis ingin bepergian. Dia ingin menjadi kaya. Sebagai ibu yang penuh kasih Dang Ambon tahu dia akan sangat merindukannya. Tapi karena cintanya begitu kuat dia membiarkannya pergi. Dia ingin dia menjadi yang paling bahagia yang dia bisa. <br>Untuk waktu yang lama tidak ada berita dari Manis. <br>Bertahun-tahun berlalu dan masih belum ada kabar dari Manis.Dang Ambon membuat dirinya sibuk dengan membantu orang miskin. Dia memberikan apa pun yang dia bisa sampai hari dia sendiri menjadi miskin.<br>Suatu hari sebuah kapal dagang besar berlabuh di Kampong Ayer. Ada desas-desus bahwa pemilik kapal itu adalah Manis! Dia sudah disebut Nakhoda Manis karena menjadi kapten kapal yang kaya. Dengan penuh semangat Dang Ambon mendayung perahu kecilnya ke arah kapal besar itu. Dia akan bersatu kembali dengan Manis yang dicintainya!"
+
+
+	var story1Page3 = "<br>Nakhoda Manis was proud and he was indeed rich. When he saw his mother he was ashamed of her and turned away claiming not to know this poor old woman. Dang Ambon was heartbroken. In her despair she cursed the ship full of riches – riches that had taken her son’s love away from her.<br><br>She would never sing her song again…<br>Suddenly, lighting flashed and there was a heavy storm. Rain, thunder and lightning!!!<br><br>When the storm cleared, her son’s ship was gone and in its place was a huge rock in the sea.<br>Today this rock is known as Jong Batu."
+
+	var story1Page3Malay = "<br>Nakhoda Manis bangga dan dia memang kaya. Ketika dia melihat ibunya, dia malu padanya dan berbalik mengklaim tidak mengenal wanita tua malang ini. Dang Ambon patah hati. Dalam keputusasaannya dia mengutuk kapal yang penuh dengan kekayaan – kekayaan yang telah mengambil cinta putranya darinya. <br>Dia tidak akan pernah menyanyikan lagunya lagi... <br>Tiba-tiba, pencahayaan menyala dan ada badai besar.Hujan, guntur dan kilat!!! <br>Ketika badai reda, kapal putranya hilang dan di tempatnya ada batu besar di laut. <br>Saat ini batu ini dikenal sebagai Jong Batu."
+	
+
+
+	localStorage.setItem("story1Page1", story1Page1);
+	localStorage.setItem("story1Page2", story1Page2);
+	localStorage.setItem("story1Page3", story1Page3);
+
+	localStorage.setItem("story1Page1Malay", story1Page1Malay);
+	localStorage.setItem("story1Page2Malay", story1Page2Malay);
+	localStorage.setItem("story1Page3Malay", story1Page3Malay);
+
+	var page1 = document.getElementById("page1");
+	var page2 = document.getElementById("page2");
+	var page3 = document.getElementById("page3");
+
+	// page1.innerHTML = localStorage.getItem("story1Page1");
+	// page2.innerHTML = localStorage.getItem("story1Page2");
+	// page3.innerHTML = localStorage.getItem("story1Page3");
+
+	page1.style.textAlign = "justify";
+	page2.style.textAlign = "justify";
+	page3.style.textAlign = "justify";
+
+	var translate = document.getElementById("translate");
+	var saveLanguage = localStorage.getItem("selectedLanguage"); 
+
+
+	function translator() {
+		
+		if (translate.value == "English") {
+
+			page1.innerHTML = localStorage.getItem("story1Page1");
+			page2.innerHTML = localStorage.getItem("story1Page2");
+			page3.innerHTML = localStorage.getItem("story1Page3");	
+ 
+			saveLanguage = translate.value;
+			localStorage.setItem("selectedLanguage", saveLanguage);
+		}
+
+		else if (translate.value == "Malay") {
+
+			page1.innerHTML = localStorage.getItem("story1Page1Malay");
+			page2.innerHTML = localStorage.getItem("story1Page2Malay");
+			page3.innerHTML = localStorage.getItem("story1Page3Malay");
+
+			saveLanguage = translate.value;
+			localStorage.setItem("selectedLanguage", saveLanguage);
+		}
+		
+	}
+
+	function save() {
+
+		if (saveLanguage == "English") {
+
+			page1.innerHTML = localStorage.getItem("story1Page1");
+			page2.innerHTML = localStorage.getItem("story1Page2");
+			page3.innerHTML = localStorage.getItem("story1Page3");	
+
+		}
+
+		else if (saveLanguage == "Malay") {
+
+			page1.innerHTML = localStorage.getItem("story1Page1Malay");
+			page2.innerHTML = localStorage.getItem("story1Page2Malay");
+			page3.innerHTML = localStorage.getItem("story1Page3Malay");
+		}
+	}
+
+	
+
+
+	function sizeChanger(sizes) {
+		var text = document.getElementById("text");
+
+		switch(sizes) {
+			case 1: text.style.fontSize="1em"; break;
+			case 2: text.style.fontSize="1.2em"; break;
+			case 3: text.style.fontSize="1.5em"; break;
+		}
+	}
+	
+	// VOICE 
+
+	var voicelist = document.querySelector("#voicelist");
+	var btnSpeak = document.querySelector("#speak");
+
+	
+	var tts = window.speechSynthesis;
+
+	var voices = [];
+
+	GetVoices();
+
+	if (speechSynthesis !== undefined) {
+
+		speechSynthesis.onvoiceschanged = GetVoices;
+	}
+
+	btnSpeak.addEventListener('click', ()=>{
+			var toSpeak = new SpeechSynthesisUtterance(localStorage.getItem("story1Page1Malay"));
+			var selectedVoiceName = voicelist.selectedOptions[0].getAttribute('data-name');
+			voices.forEach((voice)=>{
+				if(voice.name === selectedVoiceName){
+					toSpeak.voice = voice;
+				}
+			});
+			tts.speak(toSpeak);
+		});
+
+	function pause(){
+		tts.pause();
+		}
+
+	function resume(){
+		tts.resume();
+		}
+	function stop(){
+		tts.cancel();
+		}
+
+	function GetVoices(){
+			voices = tts.getVoices();
+			var selectedIndex = voicelist.selectedIndex < 0 ? 0 : voicelist.selectedIndex;
+			voicelist.innerHTML = '';
+			voices.forEach((voice)=>{
+				var listItem = document.createElement('option');
+				listItem.textContent = voice.name;
+				listItem.setAttribute('data-lang', voice.lang);
+				listItem.setAttribute('data-name', voice.name);
+				voicelist.appendChild(listItem);
+			});
+
+			voicelist.selectedIndex = 0;
+		}
+
+</script>	
 
 
 </body>

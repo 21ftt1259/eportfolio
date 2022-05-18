@@ -145,12 +145,6 @@
 		<h1><div id="title"></div></h1>
 		<div><img id="image"></div>
 		<div>Rating</div>
-		<div>
-			<select id="translate" onclick="translator()">
-				<option value="English">English</option>
-				<option value="Malay">Malay</option>
-			</select>
-		</div>
 		<h2><div id="story"><a href="">Read more..</a></div></h2>
 		
 	</div>
@@ -171,19 +165,16 @@
 
 <script type="text/javascript">
 
-	var title1 = "NAHKODA MANIS";
+		var title1 = "NAHKODA MANIS";
 		var title2 = "THE MIGHTY BABAU";
 		var title3 = "THE CLEVER MOUSE DEER";
 
 		var story1 = "Once upon a time there was a widow, Dang Ambon, who lived with her only son in Kampong Ayer. They lived a comfortable life but were certainly not rich. She loved her son Manis so very much.";
 
-		var story1Malay = "Suatu ketika dahulu ada seorang janda, Dang Ambon, yang tinggal bersama anak tunggalnya di Kampong Ayer. Mereka menjalani kehidupan yang selesa tetapi pastinya tidak kaya. Dia sangat menyayangi anaknya Manis.";
-
 		var story2 = "The villagers of Kampong Serai were scared and they had good reason to be! Nearly every night a tiger roamed their village. Nobody felt safe anymore and they decided something had to be done.";
-		var story2Malay = "Penduduk Kampung Serai takut dan mereka mempunyai alasan yang baik! Hampir setiap malam seekor harimau berkeliaran di desa mereka. Tidak ada yang merasa aman lagi dan mereka memutuskan sesuatu harus dilakukan."; 
 
 		var story3 = "One day, a buffalo was eating grass by the riverbank when he heard the voice of someone crying in pain. “Help! Help! Please let me free,” heard the buffalo.";
-		var story3Malay = "Suatu hari, seekor kerbau sedang makan rumput di tepi sungai ketika ia mendengar suara seseorang yang menangis kesakitan. Tolong! Membantu! Tolong biarkan saya bebas, dengar kerbau itu.";
+
 
 	function randomStory() {
 
@@ -223,26 +214,6 @@
 			story.innerHTML = localStorage.getItem("story3");		
 		}
 	}
-
-	function translator() {
-
-		localStorage.setItem("story1Malay", story1Malay);
-		localStorage.setItem("story2Malay", story2Malay);
-		localStorage.setItem("story3Malay", story3Malay);
-
-		var choice = document.getElementById("translate");
-
-		if(choice.value == "Malay") {
-
-			story.innerHTML = localStorage.getItem("story1Malay");
-		}
-
-		else if (choice.value == "English") {
-
-			story.innerHTML = localStorage.getItem("story1")
-		}
-	}
-
 
 </script>
 
