@@ -4,7 +4,7 @@ label the function
 9 features
 1) 3 different stories with min 3 pages for each story (9 webpages)
 2) Randomizer for the story (DONE)
-3) LocalStorage - save and retrieve
+3) LocalStorage - save and retrieve (DONE)
 4) Languages (English and Malay) (DONE)
 5) Read out loud (atleast 2 voices) use HTML5 Speech Synthesis (use LocalStorage 
 to save the latest one) ()

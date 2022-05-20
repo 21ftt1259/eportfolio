@@ -6,10 +6,16 @@
 </head>
 <style type="text/css">
   
-  *{
+  /**{
     margin: 0;
     padding: 0;
+}*/
+
+.btn {
+    float: left;
+    box-sizing: border-box;
 }
+
 .rate {
     float: left;
     height: 46px;
@@ -49,6 +55,7 @@
 </style>
 
 <body>
+
   <div class="rate">
     <input type="radio" id="star5" name="rate" value="5" />
     <label for="star5" title="text">5 stars</label>
@@ -61,6 +68,41 @@
     <input type="radio" id="star1" name="rate" value="1" />
     <label for="star1" title="text">1 star</label>
   </div>
+
+  <button onclick="rating()" class="btn">Rate!</button>
+
+<script type="text/javascript">
+
+    function rating() {
+
+        var star5 = document.getElementById("star5");
+        var star4 = document.getElementById("star4");
+        var star3 = document.getElementById("star3");
+        var star2 = document.getElementById("star2");
+        var star1 = document.getElementById("star1");
+        var rate = 0;
+        var avgRate = 0;
+
+        if (star5.checked) {
+            rate = 5.0;
+        } else if (star4.checked) {
+            rate = 4.0;
+        } else if (star3.checked) {
+            rate = 3.0;
+        } else if (star2.checked) {
+            rate = 2.0
+        } else {
+            rate = 1.0;
+        }
+
+        avgRate = rate / 5;
+
+        alert("You have rate: " + rate + "\n Averagen Rate: " + avgRate);
+    }
+
+    
+</script>
+
 </body>
 
 </html>
