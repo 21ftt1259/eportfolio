@@ -5,11 +5,10 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Story1Page1</title>
 
-	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
 	<style type="text/css">
-	@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
-
+	@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab&display=swap');
+	@import url('https://fonts.googleapis.com/css2?family=Amiri&display=swap');
 
 	input {
 		display: none;
@@ -23,17 +22,38 @@
 	h2 {
 		text-align: center;
 		font-size: 2em;
-		font-family: Helvetica, sans-serif;
+		
 	}
+
+	div>a {
+		text-decoration: none;
+		color: black;
+		font-family: 'Bebas Neue', cursive;
+		font-size: 20px;
+	}
+
+	
 
 
 	.grid1 {
-		border: 1px solid;
 		width: 85%;
 		display: grid;
-		grid-template-columns:  20% 20% 40% 40%;
+		grid-template-columns:  20% 20% 20% 40%;
 		margin: 0 auto;
+		justify-content: center;
+		font-family: 'Amiri', serif;
+		font-size: 20px;
+		
 	}
+
+	.grid2 {
+		display: grid;
+		grid-template-rows: 20% 20% 20%;
+		margin: 0 auto;
+		text-align: center;
+		
+	}
+
 
 	#page1 {
 
@@ -41,10 +61,46 @@
 		
 	}
 
+
+	.brightness-box{
+	  width: 10px;
+	  height: 10px;
+	  background: #f9f9f9;
+	  border-radius: 8px;
+	  padding: 0 20px;
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	  text-align: center;
+	}
+
+	.button {
+			padding: 15px 25px;
+			font-size: 24px;
+			text-align: center;
+			cursor: pointer;
+			outline: none;
+			color: black;
+			background-color: orange;
+			border: none;
+			border-radius: 15px;
+			box-shadow: 0 9px #999;
+			margin-top: 5px;
+		}
+
+		.button:hover {background-color: orangered;}
+
+		.button:active {
+			background-color: #3e8e41;
+			box-shadow: 0 5px #666;
+			transform: translateY(4px);
+		}
+
+
 	@media screen and (max-width: 479px) {
 
 		.grid1 {
-			visibility: hidden;
+			display: none;
 		}
 
 		#page1 {
@@ -53,35 +109,32 @@
 			font-size: 12px;
 		}
 
-		
-
-
 	}
 	
-
 </style>
 
 </head>
-<body onload="save()">
+<body onload="save()" id="body2">
 
-<div class="container">
+	<div class="container">
 
-	<h2>NAHKODA MANIS</h2>
+
+	<div><h2>NAHKODA MANIS</h2></div>
 	
 	<div id="page1">
-		During the time of Sultan Bolkiah, also known as Nakhoda Ragam, the fifth Sultan of Brunei, there lived a young man named Manis. Manis’s mother, Dang Ambun, was a very wealthy widow. Manis’s father had died while he was still a little boy, leaving all his riches to his wife Dang Ambun who promised to pass down their great wealth to Manis when he became a young man. <br> 
-		Manis’s father had left Dang Ambun a house as huge and beautiful as a palace, numerous shop-houses and dozens of ships. After her husband’s death, Dang Ambun devoted her whole attention and her love to her son Manis, the only child in this aristocratic family. From an early age, Dang Ambun sent Manis to study about religion from a pious man who also taught the children of other nobles. <br>
-		When Manis became a young man, Dang Ambun started to think about her son’s future. “All my wealth will become yours, Manis,” Dang Ambun said to herself. “You will surely have a happy and easy life with all this wealth and you will be able to find a beautiful and faithful wife.” Dang Ambun then started to day-dream about a life partner for Manis, and about marrying him off to a good-looking and kind-hearted girl. <br>
-		“I will find a special girl for Manis. You won’t need to work, Manis, as our vast wealth will guarantee a very comfortable life for you and your future generations,” Dang Ambun promised in her heart of hearts. Manis, however, had his own plans for his future and his plans were nothing like what his mother had dreamed about. In fact, Manis’s plans did not include his great wealth, nor a wife, not even his noble birthright.<br>
-		For Manis had his own ambition, an ambition that his mother knew nothing about. Many young men at that time were fond of travelling to other landsand these men brought back with them exciting tales of their journeys and adventures which Manis and his friends loved listening to. <br>
-		These stories helped to develop a keen spirit of adventure in Manis and his aristocratic friends, and fuelled Manis’s ambition to follow in the footsteps of his well-travelled countrymen in search of exciting experiences. He would gain nothing by staying on in Brunei and he felt that, like the other young men, he was old enough to venture forth. <br>
-		“I too wish to seek experience and I wish to travel,” Manis said to himself as he was returning home from his friends’ house. “Mother told me that Father used to be a traveller too and his blood runs in me,” he said. “I am a grown man now, mother,” said Manis. Dang Ambun smiled upon hearing that. She was happy because her son was indeed a grown man. “I want to be of service to our country, mother,” said Manis again.<br>
-		“Allow me to travel with my friends.” Dang Ambun was amazed when she heard Manis’ words and she asked sadly, “Oh Manis, where will you travel to?”Truly, Dang Ambun was not prepared for this. <br>
-		“We are living a life of luxury here in Brunei. How could you even think about leaving your mother here all on my own,” Dang Ambun continued. “I have made my decision, mother,” Manis said. “Besides, I won’t be gone for too long.” “Where will you travel to, my son?” Dang Ambun asked once again. “To foreign lands. Worry not, mother, for I will not forget you. I will be travelling with the young men of Brunei who are skilled sea-men,” Manis comforted his mother.
 		
 	</div>
 
 	<div class="grid1">
+
+		<div>
+			<h3>Select Color</h3>
+				<select id="colorChanger" onclick="colorChanger()"> 
+					<option value="0" >Select</option>
+					<option value="Black">Dark Mode</option>
+					<option value="White">Light Mode</option>
+				</select>
+		</div>	
 		
 		<div>
 		<h3 >Select Language</h3>
@@ -115,9 +168,9 @@
 			<button id="resetVoice">Reset Voice</button>
 		</div>
 	
-	</div>	
+	</div>
 
-	<div>Adjust contrast</div>
+</div>
 
 </div>
 
@@ -134,14 +187,18 @@
 		localStorage.setItem("story1Page1Malay", story1Page1Malay);
 
 		var page1 = document.getElementById("page1");
+		var body2 = document.getElementById("body2");
 
 		page1.style.textAlign = "justify";
+		page1.innerHTML = localStorage.getItem("story1Page1");
 
 		var translate = document.getElementById("translate");
 		var saveLanguage = localStorage.getItem("selectedLanguage");
-		var saveFontSize = localStorage.getItem("selectedFontSize"); 
+		var saveFontSize = localStorage.getItem("selectedFontSize");
+		var saveColor = localStorage.getItem("selectedColor"); 
 
 		var choice = document.getElementById("fontChanger");
+		var colorChoice = document.getElementById("colorChanger");
 
 		var speech;
 
@@ -206,22 +263,34 @@
 			page1.style.fontSize = "1.4em";
 		}
 
+		if (saveColor == "Black") {
 
-    	if (localStorage['voicelist']) {
-        inputVoice.value = localStorage['voicelist'];
-	    }
+			body2.style.backgroundColor = "black";
+			body2.style.color = "white";
 
-	    saveVoices.onclick = function(){
-	        localStorage['voicelist'] = inputVoice.value;
-	    }
+		} else if (saveColor = "white") {
 
-	    resetVoices.onclick = function(){
-	        voicelist.selectedIndex = 0;
-	        var defaultVoice = voicelist.selectedOptions[0].getAttribute('data-name');
-	        localStorage['voicelist'] = defaultVoice;
-	    }
+			body2.style.backgroundColor = "white";
+			body2.style.color = "black";
 
-	}
+		}
+
+
+	    if (localStorage['voicelist']) {
+	        inputVoice.value = localStorage['voicelist'];
+		    }
+
+		   saveVoices.onclick = function(){
+		       localStorage['voicelist'] = inputVoice.value;
+		    }
+
+		    resetVoices.onclick = function(){
+		       voicelist.selectedIndex = 0;
+		       var defaultVoice = voicelist.selectedOptions[0].getAttribute('data-name');
+		       localStorage['voicelist'] = defaultVoice;
+		    }
+
+		}
 
 	function sizeChanger() {
 
@@ -241,6 +310,25 @@
 			page1.style.fontSize = "1.4em";
 			saveFontSize = choice.value;
 			localStorage.setItem("selectedFontSize", saveFontSize);
+		}
+	}
+
+	function colorChanger() {
+
+		if (colorChoice.value == "Black") {
+
+			body2.style.backgroundColor = "black";
+			body2.style.color = "white";
+			saveColor = colorChoice.value;
+			localStorage.setItem("selectedColor", saveColor);
+
+		} else if (colorChoice.value == "White") {
+
+			body2.style.backgroundColor = "white";
+			body2.style.color = "black";
+			saveColor = colorChoice.value;
+			localStorage.setItem("selectedColor", saveColor);
+
 		}
 	}
 
@@ -299,7 +387,6 @@
 
 			voicelist.selectedIndex = 0;
 		}
-
 
 	</script>
 

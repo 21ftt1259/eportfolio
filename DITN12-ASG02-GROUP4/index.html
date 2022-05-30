@@ -6,25 +6,35 @@
 	<title></title>
 
 
+<link href='https://fonts.googleapis.com/css?family=Bowlby One SC' rel='stylesheet'>
+
 <style type="text/css">
 
 	body {
-		/*background-image: url("Images/s1.jpg");*/
-		font-family: Helvetica, sans-serif;
+		background-image: url("Images/index2.png");
+		background-repeat: no-repeat;
 		font-size: 14px;
 		
+	}
+
+	.grid1>div>img {
+
+		width: 30%;
+		height: 50%;
 	}
 
 	#title {
 
 		color: black;
+		font-family: 'Bowlby One SC';
+		font-size: 1.5em;
 	}
 	
 	.container {
 		display: grid;
 		grid-template-columns: 60% 40%;
 		width: 80%;
-		border: 1px solid;
+		/*background-color: white;*/
 		margin: 0 auto;
 		grid-gap: 1.5em 1.5em;
 	}
@@ -32,18 +42,28 @@
 	.grid1 {
 		display: grid;
 		grid-template-rows: 10% 50% 10%;
-		border: 1px solid;
 		text-align: center;
-		height: 60%;
+		margin-top: 40%;
+	}
+
+	.grid1>div:nth-child(4) {
+
+		font-size: 3em;
+		font-family: 'Bowlby One SC';
+		margin-top: 5%;
+	}
+
+	.grid1>div:nth-child(5) {
+
+		margin-left: 20%;
 	}
 
 	.grid2 {
 		display: grid;
 		grid-template-rows: 10% 25% 5% 25% 5% 25% 5%;
-		border: 1px solid;
 		margin: 0 auto;
 		text-align: center;
-		border-collapse: collapse;
+		/*border-collapse: collapse;*/
 	}
 
 	.grid2>div:nth-child(even) {
@@ -81,12 +101,52 @@
 		color: black;
 	}
 
+	.brightness-box{
+	  width: 400px;
+	  height: 60px;
+	  background: #f9f9f9;
+	  border-radius: 8px;
+	  padding: 0 20px;
+	  display: flex;
+	  align-items: center;
+	  justify-content: space-between;
+	}
+
+	.brightness-box i{
+	  margin: 0 10px;
+	}
+
+	#range{
+	  width: 100%;
+	  -webkit-appearance: none;
+	  background: #0a85ff;
+	  height: 3px;
+	  outline: none;
+	}
+
+	#range::-webkit-slider-thumb{
+	  -webkit-appearance: none;
+	  width: 22px;
+	  height: 22px;
+	  background: #333;
+	  border-radius: 50%;
+	  cursor: pointer;
+	}
+
+
 	@media screen and (max-width: 479px) {
 
 		#image {
 			height: 40vh;
 			width: 50vh;
 			margin-top: 10px;
+		}
+
+		#title {
+
+		color: black;
+		font-family: 'Bowlby One SC';
+		font-size: 1em;
 		}
 
 		#story {
@@ -105,12 +165,13 @@
 
 		.grid1 {
 
-			width: 95%;
+			width: 75%;
 			height: 70vh;
 			margin: 0 auto;
 			margin-top: 70px;
 			font-size: 20px;
 			grid-template-rows: 10% 60% 30%;
+			justify-content: center;
 
 		}
 
@@ -120,11 +181,16 @@
 
 		.grid2 {
 			display: grid;
-			grid-template-rows: 10% 20% 5% 20% 5% 20% 5%;
-			border: 1px solid;
+			grid-template-rows: 5% 20% 5% 20% 5% 20% 5%;
 			margin: 0 auto;
 			text-align: center;
 			width: 55%;
+		}
+
+		.grid1>div:nth-child(4), .grid1>div:nth-child(5) {
+
+			visibility: hidden;
+
 		}
 
 
@@ -137,10 +203,10 @@
 			grid-row-end: 3;
 		}
 
-		img {
+		.grid2>img {
 
 			width: 60%;
-			height: 50%;
+			height: 80%;
 		}
 
 		h1 {
@@ -154,7 +220,6 @@
 
 	}
 
-
 </style>
 </head>
 <body onload="randomStory()">
@@ -167,22 +232,29 @@
 		<h1><div id="title"></div></h1>
 		<div><img id="image"></div>
 		<h2><div id="story"></div></h2>
-		
+
+		<div>Adjust Contrast</div>
+      	<div class="brightness-box">
+        <input type="range" id="range" min="10" max="100" value="100">
+        </div>
 	</div>
 
 	<div class="grid2">
 		
 		<div><h1>AVAILABLE STORY</h1></div>
-		<div><img src="Images/NM3.jpg"></div>
+		<div><img src="Images/nm.png"></div>
 		<h3><div><a href="S1CoverPage.html">Nahkoda Manis</a></div></h3>
-		<div><img src="Images/TMB.jpg"></div>
-		<h3><div><a href="story2.html">The Mighty Babau</a></div></h3>
+		<div><img src="Images/tmb.png"></div>
+		<h3><div><a href="S2CoverPage.html">The Mighty Babau</a></div></h3>
 		<div><img src="Images/sg.png"></div>
 		<h3><div><a href="S3CoverPage.html">Singapore, The Lion City</a></div></h3>
 
 	</div>
 
+    </div>
+
 </div>
+
 
 <script type="text/javascript">
 
@@ -216,14 +288,14 @@
 		if (randomNum == 1) {
 
 			title.innerHTML = localStorage.getItem("title1");
-			image.src = "Images/NM3.jpg";
+			image.src = "Images/nm.png";
 			story.innerHTML = localStorage.getItem("story1");
 			
 		}
 
 		else if (randomNum == 2) {
 			title.innerHTML = localStorage.getItem("title2");
-			image.src = "Images/TMB.jpg";
+			image.src = "Images/tmb.png";
 			story.innerHTML = localStorage.getItem("story2");
 			
 		}
@@ -235,6 +307,16 @@
 			story.innerHTML = localStorage.getItem("story3");		
 		}
 	}
+
+
+	// Contrast
+	 rangeInput = document.getElementById('range');
+      container = document.getElementsByClassName('container')[0];
+
+      rangeInput.addEventListener("change",function(){
+        container.style.filter = "brightness(" + rangeInput.value + "%)";
+      });
+
 
 </script>
 

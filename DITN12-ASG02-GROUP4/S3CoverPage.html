@@ -3,19 +3,18 @@
 <head>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<title></title>
+	<title>Story3 Coverpage</title>
 
 
-<style type="text/css">
+	<style type="text/css">
+
+	@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 
 	.kontext {
 		width: 100%;
 		height: 100%;
 	}
 
-	div>img {
-		width: 35%;
-		}
 
 	.kontext .layer {
 		position: absolute;
@@ -178,6 +177,11 @@
 		background: rgba( 0, 0, 0, 0.7 );
 	}
 
+.coverPageImg{
+
+	width: 25%;
+	height: 90%;
+}
 
 /* Styles for the demo */
 
@@ -192,6 +196,7 @@ body {
 
 body {
 	background-color: #222;
+
 	font-family: Helvetica, sans-serif;
 	font-size: 14px;
 	color: #fff;
@@ -207,7 +212,7 @@ body {
 	position: relative;
 	top: 20%;
 	margin: 0;
-	font-size: 6.25em;
+	font-size: 5em;
 }
 
 .layer p {
@@ -217,16 +222,16 @@ body {
 }
 
 .layer.one {
-	background-image: url("Images/s1.jpg");
+	background-image: url("Images/s3.jpg");
+
 }
 
 .layer.two {
-	background-image: url("Images/s1.jpg");
-
+	background-image: url("Images/s3.jpg");
 }
 
 .layer.three {
-	background-image: url("Images/s1.jpg");
+	background-image: url("Images/s3.jpg");
 }
 
 .bullets {
@@ -262,72 +267,98 @@ body {
 		}
 
 
-		#averageRating {
-			font-size: 1.5em;
+#averageRating {
+		font-family: 'Bebas Neue', cursive;
+		font-size: 30px;
+	}
+
+	.grid1 {
+		display: grid;
+		grid-template-columns: 15% 70%;
+	}
+
+	.grid1>div:nth-child(1) {
+		display: grid;
+		grid-column: 1 / 2;
+		grid-row: 1 / 6;
+		align-items:  center;
+		/*margin-top: 65%;*/
+	}
+
+.grid2 {
+			width: 100%;
+			height: 95%;
+			display: grid;
+			grid-template-rows: repeat(3, 15%);
+			grid-template-columns: 100%;
+			align-items: center;
+			/*justify-content: center;*/
 		}
 
-@media screen and (max-width: 479px) {
-
-	body {
-		font-size: 7px;
-	}
-
-	div>img {
-
-		width: 70%;
-		height: 60%;
-	}
-
-	.layer h2 {
-		font-size: 5em;
-	}
-
-	.bullets li {
-		margin: 0 6px;
-	}
-}
-
-	/*IFRAME*/
-
-		#height{
-			height: 700px;
-
+	.grid3 {
+			display: grid;
+			height: 100%;
+			grid-template-columns: 15% 80%;
+			grid-template-rows: 70% 20% 20%;
+			overflow-y: scroll;
 		}
 
-		#heightS{
-			height: 700px;
-			width: 80%;
-
+	.grid3>div:nth-child(2) {
+			height: 100%;
 		}
 
-		.iframep1 { 
-			width: 80%;
-			margin: 0 auto;
-			grid-row-start: 2;
-			grid-row-end: 3;
+		.grid3>div:nth-child(3) {
+			width: 100%;
+			height: 100%;
+			grid-column: 2 / 3;
+			grid-row: 2 / 3;
+			display: block;
+		}
+	
+.test1 {
+			padding-top: 20em;
+		}
+
+	.test2 {
+			padding-top:  1em;
+			height: 70%;
+		}
+
+	div>a {
+		color: white;
+		font-family: 'Bebas Neue', cursive;
+		font-size: 35px;
+	}
+
+	.iframep1 { 
+			width: 100%;
+			height: 100%;
 			background-color: white;
 		}
 
-
-	/*COVERPAGE*/
-
-		.container {
-
-			margin: 0 auto;
-			width: 60%;
-			height: 80vh;
-			background-color: steelblue;
-			text-align: center;
-		}
 		
-		a {
+	a {
 			text-decoration: none;
 			color: black;
 		}
 
-		.button {
+	.button {
 			padding: 15px 25px;
-			font-size: 14px;
+			font-size: 24px;
+			text-align: center;
+			cursor: pointer;
+			outline: none;
+			color: black;
+			background-color: goldenrod;
+			border: none;
+			border-radius: 15px;
+			box-shadow: 0 9px #999;
+			margin-top: 5px;
+		}
+
+	.btnHome {
+			padding: 15px 25px;
+			font-size: 24px;
 			text-align: center;
 			cursor: pointer;
 			outline: none;
@@ -336,41 +367,151 @@ body {
 			border: none;
 			border-radius: 15px;
 			box-shadow: 0 9px #999;
-			margin-top: 20px;
+			margin-top: 5px;
 		}
 
-		.button:hover {background-color: lightskyblue}
+	.button:hover {background-color: darkgoldenrod;}
 
-		.button:active {
+	.button:active {
 			background-color: #3e8e41;
 			box-shadow: 0 5px #666;
 			transform: translateY(4px);
 		}
+
+
+
+@media screen and (max-width: 479px) {
+
+	body {
+		font-size: 7px;
+	}
+
+	.coverPageImg {
+
+		width: 25%;
+		height: 80%;
+		margin: 0 auto;
+	}
+
+	.layer h2 {
+		font-size: 5em;
+	}
+
+	.bullets li {
+		margin: 0 6px;
+}
+	.grid1 {
+		display: grid;
+		grid-template-columns: 100% 
+	}
+
+	.grid1>div:nth-child(1) {
+		display: grid;
+		grid-row: 7 / 8;
+		align-items: center;
+		grid-template-columns: repeat(3, 35%);
+}
+
+.grid2{
+	justify-content: center;
+}
+
+.grid3 {
+			width: 100%;
+			height: auto;
+			display: grid;
+			grid-template-columns:90%;
+			grid-template-rows: 75% 10%;
+			margin: 0 auto;
+			justify-content: center;
+			overflow-x: scroll;
+		}
+
+		.grid3>div:nth-child(1) {
+
+			grid-row: 2 / 3;
+			display: grid;
+			grid-template-columns: repeat(3, 35%);
+			
+		}
+
+		.test1 {
+			padding-top: 0;
+			margin-top: 13%;
+		}
+
+
+		.button {
+			padding: 15px 25px;
+			font-size: 14px;
+			text-align: center;
+			cursor: pointer;
+			outline: none;
+			color: black;
+			background-color: goldenrod;
+			border: none;
+			border-radius: 15px;
+			box-shadow: 0 9px #999;
+			margin-top: 5px;
+		}
+
+	}
+
 
 </style>
 </head>
 <body onload="showAvgR()">
 
 	<article class="kontext">
-	<div class="layer one show">
-		<div><h2>NAHKODA MANIS</h2></div>
 
-			<div><img src="Images/NM3.jpg"></div>
+
+	<div class="layer one show grid1">
+
+
+		<div class="grid2 test1">
+
+				<div><a href="S1CoverPage.html"><button class="button">STORY 1</button></a></div>
+				<div><a href="S2CoverPage.html"><button class="button">STORY 2</button></a></div>
+				<div><a href="S3CoverPage.html"><button class="button">STORY 3</button></a></div>
+			</div>
+		
+
+		<div><h2>SINGAPORE, THE LION CITY</h2></div>
+
+			<div ><img class="coverPageImg" src="Images/sg.png"></div>
 
 			<div id="averageRating"></div>
 
+			<div><a href="index.html"><button class="button btnHome">Back to home</button></a></div>
+
 			<p>Use the dots below or your keyoard arrows.</p>
 
-		<div><a href="index.html"><button class="button">Back to home</button></a></div>
+		</div>	
 
-	</div>
+	<div class="layer two grid3">
+		<div class="grid2 test1">
+			<div><a href="S1CoverPage.html"><button class="button">STORY 1</button></a></div>
+				<div><a href="S2CoverPage.html"><button class="button">STORY 2</button></a></div>
+				<div><a href="S3CoverPage.html"><button class="button">STORY 3</button></a></div>
+			</div>
 
-	<div class="layer two">
-		<iframe src="S1P2.html" id="height" class="iframep1" name="iframe1"></iframe>
+			<div class="test2">
+		<iframe src="S3P2.html" id="height" class="iframep1" name="iframe1"></iframe>
 	</div>
-	<div class="layer three">
-		<iframe src="S1P3.html" id="height" class="iframep1" name="iframe1"></iframe>
-	</div>
+</div>
+
+	<div class="layer three grid3">
+		<div class="grid2 test1">
+			<div><a href="S1CoverPage.html"><button class="button">STORY 1</button></a></div>
+				<div><a href="S2CoverPage.html"><button class="button">STORY 2</button></a></div>
+				<div><a href="S3CoverPage.html"><button class="button">STORY 3</button></a></div>
+			</div>
+			<div class="test2">
+				<iframe src="S3P3.html" id="height" class="iframep1" name="iframe1">
+				</iframe>
+			</div>
+		</div>
+
 </article>
 
 <ul class="bullets"></ul>
@@ -511,6 +652,7 @@ window.kontext = function( container ) {
 
 };
 
+
 /**
  * Minimal utility for dispatching signals (events).
  */
@@ -568,14 +710,12 @@ document.addEventListener( 'keyup', function( event ) {
 }, false );
 
 
-	function showAvgR() {
+  function showAvgR() {
 
 		average = document.getElementById("averageRating");
 
-		average.innerHTML = "Average rating: " + localStorage.getItem("story1AvgRating");
+		average.innerHTML = "Average rating: " + localStorage.getItem("story3AvgRating");
 	}
-
-	
 
 </script>
 
