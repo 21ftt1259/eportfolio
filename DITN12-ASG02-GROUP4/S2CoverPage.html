@@ -320,7 +320,6 @@
 	.iframep1 { 
 		width: 100%;
 		height: 100%;
-		background-color: white;
 	}
 
 		
@@ -687,11 +686,13 @@ document.addEventListener( 'keyup', function( event ) {
 }, false );
 
 
-function showAvgR() {
+
+	function showAvgR() {
 
 		average = document.getElementById("averageRating");
+		var disp_average = Number(localStorage.getItem("story2AvgRating"));
 
-		average.innerHTML = "Average rating: " + localStorage.getItem("story2AvgRating");
+		average.innerHTML = "Average rating: " + disp_average.toFixed(1);
 	}
 
 </script>

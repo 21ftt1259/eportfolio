@@ -31,12 +31,7 @@
 	}
 
 	.image {
-		margin: 0 auto;
-	}
-
-	.container {
-		display: grid;
-		grid-template-rows: auto auto auto;
+		text-align: center;
 	}
 
 	.grid1 {
@@ -55,9 +50,10 @@
 		width: 40%;
 		display: grid;
 		grid-template-columns: 30% 35% 10%;
-		margin-left: 70%;
-		font-size: 1.2em;
+		float: right;
+		justify-content: right;
 		font-family: 'Lobster', cursive;
+		font-size: 1.2em;
 	}
 
 	.grid2>div:nth-child(3), .grid2>div:nth-child(1) {
@@ -128,7 +124,6 @@
 </head>
 <body onload="save()" id="body3">
 
-<div class="container">
 
 	<div class="image"><img src="images/babau3.jpg"></div>
 	
@@ -198,7 +193,6 @@
 		</div>
 
 	</div>
-</div>
 
 	<script type="text/javascript">
 
@@ -452,8 +446,6 @@
 	        rate += Number(storeRate);
 	        total += Number(storeTotal);
 	        avgRate = rate / total;
-
-	        var rounded = Math.round(avgRate * 10) / 10; 
 
 	        localStorage.setItem("story2Rating", rate);
 	        localStorage.setItem("story2Total", total);

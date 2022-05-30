@@ -27,7 +27,6 @@
 		font-family: Helvetica, sans-serif;
 	}
 
-
 	.grid1 {
 		width: 85%;
 		display: grid;
@@ -42,7 +41,8 @@
 		width: 40%;
 		display: grid;
 		grid-template-columns: 30% 35% 10%;
-		margin-left: 70%;
+		float: right;
+		justify-content: right;
 		font-family: 'Lobster', cursive;
 		font-size: 1.2em;
 	}
@@ -114,7 +114,6 @@
 </head>
 <body onload="save()" id="body2">
 
-	
 	<div id="page2">
 	
 
@@ -446,8 +445,7 @@
 	        total += Number(storeTotal);
 	        avgRate = rate / total;
 
-	        var rounded = Math.round(avgRate * 10) / 10; 
-
+	       
 	        localStorage.setItem("story1Rating", rate);
 	        localStorage.setItem("story1Total", total);
 	        localStorage.setItem("story1AvgRating" ,avgRate);  

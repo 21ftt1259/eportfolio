@@ -41,7 +41,8 @@
 		width: 40%;
 		display: grid;
 		grid-template-columns: 30% 35% 10%;
-		margin-left: 70%;
+		float: right;
+		justify-content: right;
 		font-family: 'Lobster', cursive;
 		font-size: 1.2em;
 	}
@@ -444,8 +445,6 @@
         rate += Number(storeRate);
         total += Number(storeTotal);
         avgRate = rate / total;
-
-        var rounded = Math.round(avgRate * 10) / 10; 
 
         localStorage.setItem("story3Rating", rate);
         localStorage.setItem("story3Total", total);
